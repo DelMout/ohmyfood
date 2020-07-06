@@ -1,0 +1,431 @@
+/*------ Définition police ACME -------*/
+@font-face {
+	font-family: 'acme';
+	src: url('acme/acme-regular-webfont-webfont.eot');
+	src: url('acme/acme-regular-webfont-webfont.eot?#iefix') format('embedded-opentype'), url('acme/acme-regular-webfont-webfont.woff') format('woff'), url('acme/acme-regular-webfont-webfont.ttf') format('truetype'), url('acme/acme-regular-webfont-webfont.svg#webfontregular') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+
+
+body {
+	font-family: 'acme',Arial;
+	display: flex;
+	flex-direction: column;
+	/*flex-wrap: wrap;*/
+	font-size: 1.2em;
+	text-align: left;
+	height: 140em;
+	width:99em;
+	margin: 0;
+}
+
+
+header {
+	display: flex;
+	width: 100%;
+	justify-content: center;
+	
+}
+
+img{
+	transform:scale(0.5);
+	margin:auto;
+}
+
+.prochain, footer,header {
+	background-color: rgb(87,156,135);
+	color:rgb(252,202,70);
+	
+}
+
+.quatre_menus{
+	width:76%;
+	height:72%;
+	display:flex;
+	justify-content:space-between;
+	flex-wrap:wrap;
+	padding-left:12%;
+	padding-right:12%;
+	padding-top:6%;
+	padding-bottom:0%;
+}
+
+.accueil-menu {
+	box-shadow:0 0 1em rgba(0,0,0,0.2);
+	width:47%;
+	height:45%;
+	display: flex;
+	align-items:center;
+	justify-content:center;
+	
+}
+
+.accueil-menu p {
+		text-align: center;
+	}
+
+i{
+	font-size:4em;
+	color:orangered;
+}
+
+.resto{
+	font-size:2em;
+      }
+
+.menu {
+	font-size: 4em;
+	line-height:2em;
+}
+
+footer {
+	display: flex;
+	width: 98%;
+	position: fixed;
+	bottom: 0px;
+	font-size: 1.5em;
+	align-items: center;
+	justify-content: space-between;
+	padding:1%;
+}
+
+.prochain{
+	margin:auto;
+	margin-bottom:7%;
+	padding:1%;
+	font-size:1.6em;
+	border-radius:12px;
+}
+
+/*------CORPS DU CV -------------*/
+
+#corps {
+	display: flex;
+	flex-direction: column;
+	color: rgb(66,66,66);
+	padding: 2%;
+	padding-left: 5%;
+	padding-right: 5%;
+	width: 67%;
+	height: 82%;
+	order:1;
+	box-sizing:border-box;
+	
+}
+
+h3 { /* Titres des sous-parties*/
+	text-align: left;
+	color: rgb(0,0,0);
+	font-size: 1.8em;
+	border-bottom: 3px solid rgb(255,234,0);
+	text-transform: uppercase;
+	line-height: 2.5em;
+	vertical-align: middle;
+	margin-bottom: 5%;
+	margin-top: auto; /*ajuster cet espace pour que le corps soit aligné en bas de page avec liseré*/
+}
+
+h3 i {	/*Icones devant les sous-titres*/
+	margin-right: 1em;
+	color: rgb(255,234,0);
+	font-size: 1.3em;
+	}
+
+.liste {	/*----1 ligne de puce--- (.liste = aside + article)---*/
+	display: flex;
+	align-items:baseline;	/*Aligner la 1re ligne de aside et celle de article*/
+	margin-bottom: 1em;
+}
+
+aside {	/*--- Case gauche (avec puce) du corps ----*/
+	width: 28%;
+	margin-left: 1em;
+	}
+
+article { /*--- Case droite du corps ----*/
+	display: flex;
+	width: 72%;
+	flex-direction: column;
+	text-align: justify;
+	hyphens: auto;
+}
+
+h4 {	/*Titres des articles (Diplomes / Fonctions du poste)*/
+	margin: 0;
+	font-weight: bold;
+}
+
+ul {	/*Suppression des puces*/
+	margin: 0;
+	padding-left: 1em;
+	list-style: none;
+}
+
+.double:before { /*remplacement de la puce par double cercle plein _ 1re puce*/
+	content: "\0025C9"; /*puce en forme de doucle cercle forme pleine*/
+	color: rgb(255,234,0);
+	display: inline-block;
+	width: 1.7em;
+	margin-left: -1.7em;
+	font-size: 1.3em;
+}
+
+li:before { /*remplacement de la puce par cercle plein*/
+	content: "\002B24"; /*puce en forme de cercle plein*/
+	color: rgb(255,234,0);
+	display: inline-block;
+	width: 2em;
+	margin-left: -2em;
+}
+
+#reco {	/*--Partie RECOMMANDATIONS--*/
+	display: flex;
+	margin-bottom:4%;
+	}
+
+#reco div{
+	width:50%;
+}
+
+/*------PARTIE GAUCHE ------------ LISERÉ -------------------*/
+#lisere {
+	display: flex;
+	flex-direction: column;
+	text-align: center;
+	width: 33%;
+	background-color: rgb(255,234,0);
+	color: rgb(66,66,66);
+	height: 100%;
+	box-sizing: border-box;
+	}
+
+#photo_moi {	/*--Ma photo--*/
+	position: relative;
+	top: -8px;
+	left:-10px;
+}
+
+#cercle {	/*--Cercle pour la photo--*/
+	display: inline-block;
+	width: 300px;
+	height: 300px;
+	border-radius: 50%;
+	overflow: hidden;
+	margin-left:auto;
+	margin-right:auto;
+	border: 4px solid rgba(0,0,0,0.1);
+	margin-top:10%;
+	margin-bottom:5%;
+}
+
+h2 { /*Titres bandeau dans liseré*/
+	display: flex;
+	background-color: rgb(66,66,66);
+	color: rgb(255,234,0);
+	height: 1.6em;
+	align-items: center;
+	justify-content: center;
+	font-size: 1.8em;
+}
+
+#lisere p { /*Tous les paragraphes*/
+	padding-left: 14%;
+	padding-right: 14%;
+}
+
+.contact {	/* Textes de la partie CONTACT*/
+	text-align: left;
+}
+
+#partie_contact{
+	margin-bottom:3%;
+}
+
+#propos { /* Partie A PROPOS DE MOI*/
+	margin-bottom: auto;	/*Ajustement pour permettre que "loisirs" se mette bien en bas de page*/
+}
+
+#propos p { /* Textes de la partie A PROPOS DE MOI*/
+	display: flex;
+	text-align: justify;
+	hyphens: auto;
+	}
+
+#loisirs{	/*Partie LOISIRS*/
+	display:flex;
+	flex-direction:column;
+	justify-content:center;
+	}
+
+#loisirs div {
+	display: flex;
+	justify-content: center;
+	margin-top: 5%;
+	margin-bottom: 10%;
+}
+
+#lisere i { /*les icones loisirs*/
+	width: 1em;
+	height: 1em;
+	border-radius: 50%;
+	border: 3px solid rgb(66,66,66);
+	padding: 1%;
+	margin-left: 2%;
+	margin-right: 2%;
+	overflow: hidden;
+}
+
+/*----------------MEDIA QUERIES------site responsive------------------*/
+
+/*--------Format tablette---------*/
+@media only screen and (max-width: 992px) 
+{
+body {
+	flex-wrap: nowrap;
+	height:auto;
+	}
+
+header{
+	order:0;
+	width:100%;
+	padding-bottom:5%;
+	padding-top:5%;
+	}
+
+#lisere {
+	flex-direction: row;
+	flex-wrap: wrap;
+	width: 100%;
+	}
+
+#lisere p { /*Tous les paragraphes*/
+	padding-left: 4%;
+	padding-right: 4%;
+	}
+
+#cercle {
+	height: 250px;
+	width: 250px;
+	margin-top:15%;
+	}
+
+#photo_moi {
+	height: 250px;
+	width: 250px;
+	top: 0px;
+	left: 0px;
+	}
+
+#photo {
+	width: 50%;
+	}
+
+#partie_contact { /*Partie CONTACT*/
+	width: 50%;
+	}
+
+h2 {
+	margin-left: 2%;
+	margin-right: 2%;
+	font-size: 1.3em;
+}
+
+#propos { /*Partie A PROPOS DE MOI*/
+	width: 50%;
+	margin-bottom: 4%;
+	}
+
+#loisirs { /*Partie LOISIRS*/
+	justify-content: flex-start;
+	width: 50%;
+	}
+	
+#lisere i {		/*les icones loisirs */
+	margin:2%;
+	}	
+
+#corps{
+	width:100%;
+	}	
+	
+aside{
+	width:32%;
+	padding-right:4%;
+	}
+
+article {
+	width: 68%;
+	}
+}
+
+/*---------Format mobile---------*/
+@media only screen and (max-width: 767px) {
+
+body{
+	height:auto;
+}
+
+header {
+	height:20%;
+	font-size:1.2em;
+	}
+
+#lisere {
+	flex-direction: column;
+	width: 100%;
+	}
+
+#cercle {
+	height: 250px;
+	width: 250px;
+	margin-top: 10%;
+	}
+
+#photo_moi {
+	height: 250px;
+	width: 250px;
+	top: 0px;
+	left: 0px;
+	}
+
+#photo,#partie_contact,#propos,#loisirs{ /*Les 4 parties du liseré*/
+	width:100%;
+	}
+
+h2 {
+	margin-left: 0%;
+	margin-right: 0%;
+		}
+
+h3{
+	font-size:1.1em;
+}
+.liste,#reco{
+	flex-direction:column;
+		}
+
+#reco div{
+	text-align:left;
+	width:100%;
+}
+
+.liste aside,.liste article{
+	width:100%;
+	}
+
+.liste br{	/*Supprimer les retours à la ligne fait dans aside*/
+	display:none;
+	}
+
+aside{
+	margin-bottom:4%;
+	}
+
+.liste article p{
+	margin-top:2%;
+	}
+}
+
+
