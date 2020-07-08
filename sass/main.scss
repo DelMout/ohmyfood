@@ -72,7 +72,19 @@ $police-menu: Arial) {
 		font-family: $police-menu;
 	}
 }
+a {
+	text-decoration: none;
 
+	&:visited{
+		color: $couleur-logo;
+	}
+	&:link{
+		color: $couleur-logo;
+	}
+	&:active{
+		color: $couleur-logo;
+	}
+}
 
 
 
@@ -91,8 +103,8 @@ img {
 }
 
 .prochain, footer, header {
-	background-color: rgb(87,156,135);
-	color: rgb(252,202,70);
+	background-color: $couleur-bandeau;
+	color: $couleur-logo;
 }
 
 .quatre_menus {
@@ -105,12 +117,22 @@ img {
 	padding-right: 12%;
 	padding-top: 6%;
 	padding-bottom: 0%;
-}
 
-.accueil-menu {
+	& a{
 	box-shadow: 0 0 1em rgba(0,0,0,0.2);
 	width: 47%;
 	height: 45%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	}
+}
+
+/*bloc ci-dessous a supprimer ensuite, apres les 4 a et 4 liens*/
+.accueil-menu {
+	box-shadow: 0 0 1em rgba(0,0,0,0.2);
+	width: /*100%*/47%;
+	height: /*100%*/45%;
 	display: flex;
 	align-items: center;
 	justify-content: center;
@@ -224,10 +246,57 @@ footer {
 	}
 }
 
+/******LES CARTES*******/
+
+.body-carte{
+	height:100em;
+}
+
+
+.note_enchantee {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	border:2px dotted green;
+	}
 
 	
+h1{
+	text-align:center;
+}
 
+.carte {
+	box-shadow: 0 0 1em rgba(0,0,0,0.2);
+	width: 70%;
+	display: flex;
+	flex-direction: column;
+	/*align-items: center;*/
+	justify-content: center;
+	padding: 5%;
+	margin-bottom:0;
 
+	& .plats {
+		display:flex;
+		flex-direction:column;
+		border: 1px solid blue;
+		& span{
+			float:right;
+		}
+		
+	}
+
+	& i,h2,h3,h4 {
+		text-align: center;
+	}
+
+	& ul {
+		text-align: left;
+		border: 1px solid red;
+		list-style-type:none;
+		padding:0;
+	}
+}
 
 
 
