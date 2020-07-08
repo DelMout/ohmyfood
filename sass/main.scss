@@ -1,11 +1,15 @@
 
-@font-face {
+/*@font-face {
 	font-family: 'acme';
 	src: url('acme/acme-regular-webfont-webfont.eot');
 	src: url('acme/acme-regular-webfont-webfont.eot?#iefix') format('embedded-opentype'), url('acme/acme-regular-webfont-webfont.woff') format('woff'), url('acme/acme-regular-webfont-webfont.ttf') format('truetype'), url('acme/acme-regular-webfont-webfont.svg#webfontregular') format('svg');
 	font-weight: normal;
 	font-style: normal;
-}
+}*/
+
+$couleur-bandeau:rgb(87,156,135);
+$couleur-logo:rgb(252,202,70);
+
 
 @keyframes zoom-menu{
 	0%{
@@ -29,20 +33,47 @@
 }
 
 @keyframes suspension{
-	from{opacity:0;}
-	to{opacity:1;}
+	50% {
+		opacity:0;
+		transform:scale(0.7);
+	}
 }
 
+
 body {
-	font-family: 'acme',Arial;
+	font-family: Arial;
 	display: flex;
 	flex-direction: column;
 	font-size: 1.2em;
-	text-align: left;
 	height: 140em;
-	width: 99em;
 	margin: 0;
 }
+
+@mixin mep-quatre-menus($couleur-fond: white,$couleur-debut-degrade: black,$couleur-fin-degrade: black,$couleur-menu: black,$police-resto: Arial,
+$police-menu: Arial) {
+	background-color: $couleur-fond;
+
+	& p{
+		animation:zoom-menu 5s ease-out infinite;
+	}
+	
+	
+	& .resto {
+		background: linear-gradient(45deg, $couleur-debut-degrade 0%,$couleur-fin-degrade 100%);
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
+		font-family: $police-resto;
+		}
+
+	& .menu {
+		font-size: 4em;
+		line-height: 2em;
+		color: $couleur-menu;
+		font-family: $police-menu;
+	}
+}
+
+
 
 
 header {
@@ -52,8 +83,11 @@ header {
 }
 
 img {
-	transform: scale(0.5);
+	width: 30%;
 	margin: auto;
+	margin-top: 5%;
+	margin-bottom: 5%;
+	
 }
 
 .prochain, footer, header {
@@ -85,27 +119,62 @@ img {
 
 .accueil-menu p {
 	text-align: center;
-	animation: zoom-menu 3s ease-out infinite alternate;
+	/*animation: zoom-menu 3s ease-out infinite alternate;*/
+	
 }
 
 i {
 	font-size: 4em;
-	color: orangered;
+	background: linear-gradient(to right, rgb(241,88,97) 0%,rgb(247,143,106) 100%);
+	-webkit-background-clip:text;
+	-webkit-text-fill-color:transparent;
 }
 
 .resto {
 	font-size: 2em;
-}
-
-.menu {
-	font-size: 4em;
-	line-height: 2em;
-}
-
-.prochain span{
 	transform-origin:left;
-	animation:suspension 6s infinite;
+	animation:degrade 10s;
+	
+	
 }
+
+
+.premier {
+	$couleur-fond: rgb(252,223,219);
+	@include mep-quatre-menus($couleur-fond);
+	
+	& .menu{
+	text-transform:uppercase;
+	}
+}
+
+.deuxieme {
+	$couleur-fond: rgb(255,245,254);
+	$couleur-debut-degrade: rgb(199,116,18);
+	$couleur-fin-degrade: rgb(144,91,253);
+	$couleur-menu: rgb(199,116,18);
+
+	@include mep-quatre-menus($couleur-fond,$couleur-debut-degrade,$couleur-fin-degrade,$couleur-menu)
+}
+
+.troisieme {
+	$couleur-fond: rgb(249,249,249);
+	$couleur-debut-degrade: rgb(6,69,229);
+	$couleur-fin-degrade: rgb(8,135,251);
+	$couleur-menu: rgb(8,135,251);
+
+	@include mep-quatre-menus($couleur-fond,$couleur-debut-degrade,$couleur-fin-degrade,$couleur-menu)
+}
+
+.quatrieme {
+	$couleur-fond:white;
+	$couleur-debut-degrade: rgb(66,151,60);
+	$couleur-fin-degrade: rgb(191,255,126);
+	$couleur-menu: rgb(66,151,60);
+
+	@include mep-quatre-menus($couleur-fond,$couleur-debut-degrade,$couleur-fin-degrade,$couleur-menu)
+}
+
 
 footer {
 	display: flex;
@@ -124,16 +193,39 @@ footer {
 
 
 .prochain {
+	display: flex;
 	margin: auto;
-	margin-bottom: 7%;
-	padding: 1%;
+	padding-left: 2%;
+	padding-right: 2%;
 	font-size: 1.6em;
 	border-radius: 12px;
+	line-height: 0em;
+	flex-direction: row;
 
+	& span {
+		display: inline-block;
+		width: 0.4em;
+		height: 0.4em;
+		border-radius: 50%;
+		position: relative;
+		top: 42%;
+		left: 5%;
+		margin: 0.1em;
+		background-color: $couleur-logo;
+		animation: suspension 2s infinite ease-in-out;
+
+		&:nth-child(3) {
+			animation-delay: 0.4s;
+		}
+
+		&:nth-child(4) {
+			animation-delay: 0.8s;
+		}
+	}
 }
 
 
-
+	
 
 
 
