@@ -99,18 +99,24 @@ img {
 }
 
 /*bloc ci-dessous a supprimer ensuite, apres les 4 a et 4 liens*/
-.accueil-menu {
-  box-shadow: 0 0 1em rgba(0, 0, 0, 0.2);
-  width: 47%;
-  height: 45%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
+/*.accueil-menu {
+	box-shadow: 0 0 1em rgba(0,0,0,0.2);
+	width: 0%;
+	height: 45%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
 
+}*/
+.accueil-menu {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 .accueil-menu p {
   text-align: center;
-  /*animation: zoom-menu 3s ease-out infinite alternate;*/
 }
 
 i {
@@ -253,12 +259,16 @@ footer div {
   height: 100em;
 }
 
-.note_enchantee {
+.grande-carte {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   border: 2px dotted green;
+}
+.grande-carte .premier p {
+  animation: zoom-menu paused;
+  text-align: center;
 }
 
 h1 {
@@ -278,10 +288,37 @@ h1 {
 .carte .plats {
   display: flex;
   flex-direction: column;
+  position: relative;
   border: 1px solid blue;
 }
 .carte .plats span {
   float: right;
+}
+.carte .plats h3 {
+  background-color: none;
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+}
+.carte .plats h3::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0;
+  height: 2px;
+  background-color: black;
+  transition: width 1s ease;
+}
+.carte .plats h3:hover::after {
+  width: 100%;
+}
+.carte .plats .trait {
+  position: absolute;
+  left: -3%;
+  top: -15%;
+  width: 107%;
+  transform: scaleY(0.3);
 }
 .carte i, .carte h2, .carte h3, .carte h4 {
   text-align: center;
