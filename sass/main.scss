@@ -13,15 +13,15 @@ $couleur-logo:rgb(252,202,70);
 
 @keyframes zoom-menu{
 	0%{
-		opacity:0;
-		transform:scale(0);
-	}
-	30%{
-		opacity:0.2;
-	}
-	100%{
 		opacity:1;
 		transform:scale(1);
+	}
+	60%{
+		opacity:0.5;
+	}
+	100%{
+		opacity:0.3;
+		transform:scale(2);
 	}
 }
 
@@ -53,10 +53,6 @@ body {
 $police-menu: Arial) {
 	background-color: $couleur-fond;
 
-	& p{
-		animation:zoom-menu 5s ease-out infinite;
-	}
-	
 	
 	& .resto {
 		background: linear-gradient(45deg, $couleur-debut-degrade 0%,$couleur-fin-degrade 100%);
@@ -72,6 +68,7 @@ $police-menu: Arial) {
 		font-family: $police-menu;
 	}
 }
+
 a {
 	text-decoration: none;
 
@@ -118,13 +115,15 @@ img {
 	padding-top: 6%;
 	padding-bottom: 0%;
 
-	& a{
-	box-shadow: 0 0 1em rgba(0,0,0,0.2);
-	width: 47%;
-	height: 45%;
-	display: flex;
-	align-items: center;
-	justify-content: center;
+	
+
+	& a {
+		box-shadow: 0 0 1em rgba(0,0,0,0.2);
+		width: 47%;
+		height: 45%;
+		display: flex;
+		align-items: center;
+		justify-content: center;
 	}
 }
 
@@ -139,17 +138,18 @@ img {
 
 }*/
 
-.accueil-menu{
-	width:100%;
-	height:100%;
-	display:flex;
-	justify-content:center;
-	align-items:center;
-	
-	
-	& p {
-	text-align: center;
-	}	
+.accueil-menu {
+	width: 100%;
+	height: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	text-align:center;
+	overflow:hidden;
+
+	&:hover>p {
+		animation: zoom-menu 3s infinite ease-in-out alternate;
+	}
 }
 
 i {
@@ -217,7 +217,7 @@ footer {
 	justify-content: space-between;
 	padding: 1%;
 
-	& div{
+	&:hover>div{
 		animation:mention 3s infinite;
 	}
 }
@@ -310,7 +310,6 @@ h1{
 			position: relative;
 			margin-left: auto;
 			margin-right: auto;
-			
 
 			&::after {
 				content: '';
@@ -328,14 +327,49 @@ h1{
 			}
 		}
 
-		& .trait {
+		& .trait_g_entree {
 			position: absolute;
-			left: -3%;
-			top: -15%;
-			width: 107%;
-			transform: scaleY(0.3);
-			
-			
+			left: -0.5%;
+			top: -6%;
+			width: 40%;
+			height: 3%;
+		}
+
+		& .trait_d_entree {
+			position: absolute;
+			left: 61%;
+			top: -6%;
+			width: 40%;
+		}
+
+		& .trait_g_plat {
+			position: absolute;
+			left: -0.5%;
+			top: 30%;
+			width: 40%;
+			height: 3%;
+		}
+
+		& .trait_d_plat {
+			position: absolute;
+			left: 61%;
+			top: 30%;
+			width: 40%;
+		}
+
+		& .trait_g_dessert {
+			position: absolute;
+			left: -0.5%;
+			top: 60%;
+			width: 40%;
+			height: 3%;
+		}
+
+		& .trait_d_dessert {
+			position: absolute;
+			left: 61%;
+			top: 60%;
+			width: 40%;
 		}
 	}
 
@@ -353,6 +387,12 @@ h1{
 		padding: 0;
 	}
 }
+
+hr{
+	width:40%;
+	height:1px;
+}
+
 
 
 
