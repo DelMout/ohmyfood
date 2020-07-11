@@ -1,11 +1,61 @@
 
-/*@font-face {
-	font-family: 'acme';
-	src: url('acme/acme-regular-webfont-webfont.eot');
-	src: url('acme/acme-regular-webfont-webfont.eot?#iefix') format('embedded-opentype'), url('acme/acme-regular-webfont-webfont.woff') format('woff'), url('acme/acme-regular-webfont-webfont.ttf') format('truetype'), url('acme/acme-regular-webfont-webfont.svg#webfontregular') format('svg');
+@font-face {
+	font-family: 'blokletters_gras';
+	src: url('../polices/blokletters/gras/Blokletters-Viltstift-webfont.eot');
+	src: url('../polices/blokletters/gras/Blokletters-Viltstift-webfont.eot?#iefix') format('embedded-opentype'), url('../polices/blokletters/gras/Blokletters-Viltstift-webfont.woff2') format('woff2'), url('../polices/blokletters/gras/Blokletters-Viltstift-webfont.woff') format('woff'), url('../polices/blokletters/gras/Blokletters-Viltstift-webfont.ttf') format('truetype'), url('../polices/blokletters/gras/Blokletters-Viltstift-webfont.svg#blokletters_viltstifviltstift') format('svg');
 	font-weight: normal;
 	font-style: normal;
-}*/
+}
+@font-face {
+	font-family: 'blokletters_normal';
+	src: url('../polices/blokletters/normal/Blokletters-Balpen-webfont.eot');
+	src: url('../polices/blokletters/normal/Blokletters-Balpen-webfont.eot?#iefix') format('embedded-opentype'), url('../polices/blokletters/normal/Blokletters-Balpen-webfont.woff2') format('woff2'), url('../polices/blokletters/normal/Blokletters-Balpen-webfont.woff') format('woff'), url('../polices/blokletters/normal/Blokletters-Balpen-webfont.ttf') format('truetype'), url('../polices/blokletters/normal/Blokletters-Balpen-webfont.svg#blokletters_balpenbalpen') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'bodonixt';
+	src: url('../polices/bodoni/BodoniXT-webfont.eot');
+	src: url('../polices/bodoni/BodoniXT-webfont.eot?#iefix') format('embedded-opentype'), url('../polices/bodoni/BodoniXT-webfont.woff2') format('woff2'), url('../polices/bodoni/BodoniXT-webfont.woff') format('woff'), url('../polices/bodoni/BodoniXT-webfont.ttf') format('truetype'), url('../polices/bodoni/BodoniXT-webfont.svg#bodonixtregular') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'courgette';
+	src: url('../polices/courgette/courgette-regular-webfont.eot');
+	src: url('../polices/courgette/courgette-regular-webfont.eot?#iefix') format('embedded-opentype'), url('../polices/courgette/courgette-regular-webfont.woff') format('woff'), url('../polices/courgette/courgette-regular-webfont.ttf') format('truetype'), url('../polices/courgette/courgette-regular-webfont.svg#courgetteregular') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'croissant';
+	src: url('../polices/croissant/croissantone-regular-webfont.eot');
+	src: url('../polices/croissant/croissantone-regular-webfont.eot?#iefix') format('embedded-opentype'), url('../polices/croissant/croissantone-regular-webfont.woff2') format('woff2'), url('../polices/croissant/croissantone-regular-webfont.woff') format('woff'), url('../polices/croissant/croissantone-regular-webfont.ttf') format('truetype'), url('../polices/croissant/croissantone-regular-webfont.svg#croissant_oneregular') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'dancing';
+	src: url('../polices/dancing/ancingscript-regular-webfont.eot');
+	src: url('../polices/dancing/dancingscript-regular-webfont.eot?#iefix') format('embedded-opentype'), url('../polices/dancing/dancingscript-regular-webfont.woff2') format('woff2'), url('../polices/dancing/dancingscript-regular-webfont.woff') format('woff'), url('../polices/dancing/dancingscript-regular-webfont.ttf') format('truetype'), url('../polices/dancing/dancingscript-regular-webfont.svg#dancing_script_otregular') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'inter';
+	src: url('../polices/inter/inter-regular-webfont.eot');
+	src: url('../polices/inter/inter-regular-webfont.eot?#iefix') format('embedded-opentype'), url('../polices/inter/nter-regular-webfont.woff2') format('woff2'), url('../polices/inter/inter-regular-webfont.woff') format('woff'), url('../polices/inter/inter-regular-webfont.ttf') format('truetype'), url('../polices/inter/inter-regular-webfont.svg#interregular') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'kaushan';
+	src: url('../polices/kaushan/kaushanscript-regular-webfont.eot');
+	src: url('../polices/kaushan/aushanscript-regular-webfont.eot?#iefix') format('embedded-opentype'), url('../polices/kaushan/kaushanscript-regular-webfont.woff2') format('woff2'), url('../polices/kaushan/kaushanscript-regular-webfont.woff') format('woff'), url('../polices/kaushan/kaushanscript-regular-webfont.ttf') format('truetype'), url('../polices/kaushan/kaushanscript-regular-webfont.svg#kaushan_scriptregular') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
 
 $couleur-bandeau:rgb(87,156,135);
 $couleur-logo:rgb(252,202,70);
@@ -49,8 +99,8 @@ body {
 	margin: 0;
 }
 
-@mixin mep-quatre-menus($couleur-fond: white,$couleur-debut-degrade: black,$couleur-fin-degrade: black,$couleur-menu: black,$police-resto: Arial,
-$police-menu: Arial) {
+@mixin mep-quatre-menus($couleur-fond: white,$couleur-debut-degrade: black,$couleur-fin-degrade: black,$couleur-menu: black,$police-resto: Arial, 
+$police-menu:'blokletters_normal') {
 	background-color: $couleur-fond;
 
 	
@@ -102,6 +152,7 @@ img {
 .prochain, footer, header {
 	background-color: $couleur-bandeau;
 	color: $couleur-logo;
+	font-family:inter;
 }
 
 .quatre_menus {
@@ -173,9 +224,13 @@ i {
 .premier {
 	$couleur-fond: rgb(252,223,219);
 	@include mep-quatre-menus($couleur-fond);
-	
-	& .menu{
-	text-transform:uppercase;
+
+	& .menu {
+		text-transform: uppercase;
+		font-family: 'blokletters_gras';
+	}
+	& .resto{
+		font-family:'courgette';
 	}
 }
 
@@ -185,7 +240,15 @@ i {
 	$couleur-fin-degrade: rgb(144,91,253);
 	$couleur-menu: rgb(199,116,18);
 
-	@include mep-quatre-menus($couleur-fond,$couleur-debut-degrade,$couleur-fin-degrade,$couleur-menu)
+	@include mep-quatre-menus($couleur-fond,$couleur-debut-degrade,$couleur-fin-degrade,$couleur-menu);
+
+	& .menu {
+		font-family: 'bodonixt';
+	}
+
+	& .resto {
+		font-family: 'croissant';
+	}
 }
 
 .troisieme {
@@ -194,16 +257,24 @@ i {
 	$couleur-fin-degrade: rgb(8,135,251);
 	$couleur-menu: rgb(8,135,251);
 
-	@include mep-quatre-menus($couleur-fond,$couleur-debut-degrade,$couleur-fin-degrade,$couleur-menu)
+	@include mep-quatre-menus($couleur-fond,$couleur-debut-degrade,$couleur-fin-degrade,$couleur-menu);
+
+	& .resto {
+		font-family: 'dancing';
+	}
 }
 
 .quatrieme {
-	$couleur-fond:white;
+	$couleur-fond: white;
 	$couleur-debut-degrade: rgb(66,151,60);
 	$couleur-fin-degrade: rgb(191,255,126);
 	$couleur-menu: rgb(66,151,60);
 
-	@include mep-quatre-menus($couleur-fond,$couleur-debut-degrade,$couleur-fin-degrade,$couleur-menu)
+	@include mep-quatre-menus($couleur-fond,$couleur-debut-degrade,$couleur-fin-degrade,$couleur-menu);
+
+	& .resto {
+		font-family: 'kaushan';
+	}
 }
 
 
@@ -282,7 +353,9 @@ h1{
 	text-align:center;
 }
 
-
+li{
+	font-family:'Segoe Print';
+}
 
 .carte {
 	box-shadow: 0 0 1em rgba(0,0,0,0.2);
@@ -327,77 +400,83 @@ h1{
 			}
 		}
 
-		& .trait_g_entree {
+		& .trait_g {
 			position: absolute;
 			left: -0.5%;
+			width: 40%;
+
+			&.trait_chic {
+				left: -1%;
+			}
+		}
+
+		& .trait_d {
+			position: absolute;
+			left: 61%;
+			width: 40%;
+
+			&.trait_chic, &.trait_delice, &.trait_palette {
+				transform: scaleX(-1);
+			}
+
+			&.trait_delice, &.trait_palette {
+				left: 60%;
+			}
+		}
+
+		& .entree {
 			top: -6%;
-			width: 40%;
-			height: 3%;
+
+			&.trait_chic {
+				filter: hue-rotate(137deg) brightness(120%);
+			}
 		}
 
-		& .trait_d_entree {
-			position: absolute;
-			left: 61%;
-			top: -6%;
-			width: 40%;
-		}
-
-		& .trait_g_plat {
-			position: absolute;
-			left: -0.5%;
+		& .plat {
 			top: 30%;
-			width: 40%;
+
+			&.trait_delice {
+				filter: brightness(180%);
+			}
+
+			&.trait_chic {
+				
+				filter: hue-rotate(33deg) saturate(83%);
+			}
+		}
+
+		& .dessert {
+			top: 60%;
+
+			&.trait_delice {
+				filter: brightness(360%);
+			}
+		}
+		/*filter: invert(48%) sepia(50%) saturate(3207%) hue-rotate(20deg);*/
+		& .trait_note { /*Exception pour diminuer l'image du trait de gauche dans menu note enchantee*/
 			height: 3%;
 		}
 
-		& .trait_d_plat {
-			position: absolute;
-			left: 61%;
-			top: 30%;
-			width: 40%;
-		}
 
-		& .trait_g_dessert {
-			position: absolute;
-			left: -0.5%;
-			top: 60%;
-			width: 40%;
-			height: 3%;
-		}
 
-		& .trait_d_dessert {
-			position: absolute;
-			left: 61%;
-			top: 60%;
-			width: 40%;
+
+		& ul {
+			text-align: left;
+			border: 1px solid red;
+			list-style-type: none;
+			padding: 0;
 		}
 	}
 
 	& i, h2, h3, h4 {
 		text-align: center;
 	}
+}
 
 
 
-
-	& ul {
-		text-align: left;
-		border: 1px solid red;
-		list-style-type: none;
-		padding: 0;
+	@media only screen and (max-width: 992px) {
 	}
-}
 
-hr{
-	width:40%;
-	height:1px;
-}
-
-
-
-
-@media only screen and (max-width: 992px)
-{}
-
-@media only screen and (max-width: 767px) {
-}
+	@media only screen and (max-width: 767px) {
+	}
