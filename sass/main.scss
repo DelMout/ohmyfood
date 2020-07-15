@@ -100,7 +100,7 @@ body {
 }
 
 @mixin mep-quatre-menus($couleur-fond: white,$couleur-debut-degrade: black,$couleur-fin-degrade: black,$couleur-menu: black,$police-resto: Arial, 
-$police-menu:'blokletters_normal') {
+$police-menu:'Segoe Print') {
 	background-color: $couleur-fond;
 
 	
@@ -109,6 +109,7 @@ $police-menu:'blokletters_normal') {
 		-webkit-background-clip: text;
 		-webkit-text-fill-color: transparent;
 		font-family: $police-resto;
+		font-size:3em;
 		}
 
 	& .menu {
@@ -178,17 +179,6 @@ img {
 	}
 }
 
-/*bloc ci-dessous a supprimer ensuite, apres les 4 a et 4 liens*/
-/*.accueil-menu {
-	box-shadow: 0 0 1em rgba(0,0,0,0.2);
-	width: 0%;
-	height: 45%;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-
-}*/
-
 .accueil-menu {
 	width: 100%;
 	height: 100%;
@@ -197,6 +187,7 @@ img {
 	align-items: center;
 	text-align:center;
 	overflow:hidden;
+	
 
 	&:hover>p {
 		animation: zoom-menu 3s infinite ease-in-out alternate;
@@ -211,7 +202,6 @@ i {
 }
 
 .resto {
-	font-size: 2em;
 	transform-origin:left;
 	animation:degrade 10s;
 	
@@ -224,13 +214,18 @@ i {
 .premier {
 	$couleur-fond: rgb(252,223,219);
 	@include mep-quatre-menus($couleur-fond);
+	
 
 	& .menu {
 		text-transform: uppercase;
-		font-family: 'blokletters_gras';
+		font-weight:bold;
+		display:inline-block;
+		margin-top:10%;
+		font-size:5em;
 	}
 	& .resto{
 		font-family:'courgette';
+		font-weight:bold;
 	}
 }
 
@@ -244,6 +239,11 @@ i {
 
 	& .menu {
 		font-family: 'bodonixt';
+		font-weight:bold;
+		font-size:5em;
+		display:inline-block;
+		transform:scaleX(1.4);
+		letter-spacing:0.05em;
 	}
 
 	& .resto {
@@ -261,6 +261,7 @@ i {
 
 	& .resto {
 		font-family: 'dancing';
+		font-size:4em;
 	}
 }
 
@@ -268,12 +269,13 @@ i {
 	$couleur-fond: white;
 	$couleur-debut-degrade: rgb(66,151,60);
 	$couleur-fin-degrade: rgb(191,255,126);
-	$couleur-menu: rgb(66,151,60);
+	$couleur-menu: rgb(114,191,86);
 
 	@include mep-quatre-menus($couleur-fond,$couleur-debut-degrade,$couleur-fin-degrade,$couleur-menu);
 
 	& .resto {
 		font-family: 'kaushan';
+		font-size: 4em;
 	}
 }
 
