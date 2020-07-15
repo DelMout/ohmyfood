@@ -196,12 +196,13 @@ i {
   margin-top: 10%;
   font-size: 5em;
 }
-.premier .resto {
+.premier .resto, .premier h2, .premier h4 {
   font-family: "courgette";
   font-weight: bold;
 }
 
 .deuxieme {
+  font-family: "bodonixt";
   background-color: #fff5fe;
 }
 .deuxieme .resto {
@@ -218,7 +219,6 @@ i {
   font-family: "Segoe Print";
 }
 .deuxieme .menu {
-  font-family: "bodonixt";
   font-weight: bold;
   font-size: 5em;
   display: inline-block;
@@ -276,7 +276,7 @@ footer {
   width: 98%;
   position: fixed;
   bottom: 0px;
-  font-size: 1.5em;
+  font-size: 2em;
   align-items: center;
   justify-content: space-between;
   padding: 1%;
@@ -288,9 +288,10 @@ footer:hover > div {
 .prochain {
   display: flex;
   margin: auto;
+  margin-top: 0;
   padding-left: 2%;
   padding-right: 2%;
-  font-size: 1.6em;
+  font-size: 2.5em;
   border-radius: 12px;
   line-height: 0em;
   flex-direction: row;
@@ -316,7 +317,9 @@ footer:hover > div {
 
 /******LES CARTES*******/
 .body-carte {
-  height: 100em;
+  height: 115em;
+  font-family: "Segoe Print";
+  font-size: 1.8em;
 }
 
 .grande-carte {
@@ -324,19 +327,42 @@ footer:hover > div {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  border: 2px dotted green;
 }
 .grande-carte .premier p {
-  animation: zoom-menu paused;
   text-align: center;
 }
 
 h1 {
   text-align: center;
+  font-family: inter;
+  font-size: 3.5em;
+  margin-top: 7%;
 }
 
-li {
-  font-family: "Segoe Print";
+h2 {
+  font-size: 3.2em;
+  margin-bottom: 0;
+}
+
+h3 {
+  font-size: 1.6em;
+  margin: 0;
+  margin-top: 5%;
+}
+
+h4 {
+  font-size: 2.8em;
+  margin: 0;
+}
+
+.fin {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin-top: 5%;
+}
+.fin i {
+  margin-right: 2%;
 }
 
 .carte {
@@ -344,20 +370,33 @@ li {
   width: 70%;
   display: flex;
   flex-direction: column;
-  /*align-items: center;*/
   justify-content: center;
-  padding: 5%;
+  padding: 10%;
   margin-bottom: 0;
+}
+.carte.premier {
+  padding: 5%;
+}
+.carte.premier span {
+  font-weight: bold;
+}
+.carte.deuxieme {
+  font-weight: normal;
+}
+.carte.troisieme h3, .carte.troisieme span, .carte.quatrieme h3, .carte.quatrieme span {
+  font-size: 1.2em;
+  font-weight: normal;
 }
 .carte .plats {
   display: flex;
   flex-direction: column;
   position: relative;
-  border: 1px solid blue;
-  /*filter: invert(48%) sepia(50%) saturate(3207%) hue-rotate(20deg);*/
+  border: 2px solid red;
 }
 .carte .plats span {
   float: right;
+  display: flex;
+  align-items: flex-end;
 }
 .carte .plats h3 {
   background-color: none;
@@ -371,7 +410,7 @@ li {
   left: 0;
   bottom: 0;
   width: 0;
-  height: 2px;
+  height: 4px;
   background-color: black;
   transition: width 1s ease;
 }
@@ -380,43 +419,66 @@ li {
 }
 .carte .plats .trait_g {
   position: absolute;
-  left: -0.5%;
+  left: -11%;
   width: 40%;
 }
-.carte .plats .trait_g.trait_chic {
-  left: -1%;
+.carte .plats .trait_g.trait_note {
+  left: -0.5%;
+  height: 1.5%;
+  width: 30%;
 }
 .carte .plats .trait_d {
   position: absolute;
-  left: 61%;
+  left: 71%;
   width: 40%;
 }
 .carte .plats .trait_d.trait_chic, .carte .plats .trait_d.trait_delice, .carte .plats .trait_d.trait_palette {
   transform: scaleX(-1);
 }
-.carte .plats .trait_d.trait_delice, .carte .plats .trait_d.trait_palette {
-  left: 60%;
+.carte .plats .trait_d.trait_note {
+  width: 30%;
+  height: 1.5%;
 }
 .carte .plats .entree {
-  top: -6%;
+  top: 1%;
+}
+.carte .plats .entree.trait_note {
+  top: 2%;
 }
 .carte .plats .entree.trait_chic {
   filter: hue-rotate(137deg) brightness(120%);
 }
+.carte .plats .entree.trait_chic + h3, .carte .plats .entree.trait_chic + ul {
+  color: #c77412;
+}
 .carte .plats .plat {
-  top: 30%;
+  top: 34%;
 }
 .carte .plats .plat.trait_delice {
   filter: brightness(180%);
+  top: 34.5%;
 }
 .carte .plats .plat.trait_chic {
   filter: hue-rotate(33deg) saturate(83%);
 }
+.carte .plats .plat.trait_chic + h3, .carte .plats .plat.trait_chic + ul {
+  color: #a56799;
+}
+.carte .plats .plat.trait_note {
+  top: 39%;
+}
 .carte .plats .dessert {
-  top: 60%;
+  top: 67%;
 }
 .carte .plats .dessert.trait_delice {
   filter: brightness(360%);
+  top: 68.5%;
+}
+.carte .plats .dessert.trait_note {
+  top: 70%;
+}
+.carte .plats .dessert.trait_chic + h3, .carte .plats .dessert.trait_chic + ul {
+  color: #905bfd;
 }
 .carte .plats .trait_note {
   /*Exception pour diminuer l'image du trait de gauche dans menu note enchantee*/
@@ -424,9 +486,9 @@ li {
 }
 .carte .plats ul {
   text-align: left;
-  border: 1px solid red;
   list-style-type: none;
   padding: 0;
+  line-height: 3;
 }
 .carte i, .carte h2, .carte h3, .carte h4 {
   text-align: center;

@@ -167,7 +167,6 @@ img {
 	padding-top: 6%;
 	padding-bottom: 0%;
 
-	
 
 	& a {
 		box-shadow: 0 0 1em rgba(0,0,0,0.2);
@@ -223,7 +222,7 @@ i {
 		margin-top:10%;
 		font-size:5em;
 	}
-	& .resto{
+	& .resto,& h2,& h4{
 		font-family:'courgette';
 		font-weight:bold;
 	}
@@ -234,19 +233,19 @@ i {
 	$couleur-debut-degrade: rgb(199,116,18);
 	$couleur-fin-degrade: rgb(144,91,253);
 	$couleur-menu: rgb(199,116,18);
+	font-family: 'bodonixt';
 
 	@include mep-quatre-menus($couleur-fond,$couleur-debut-degrade,$couleur-fin-degrade,$couleur-menu);
 
 	& .menu {
-		font-family: 'bodonixt';
-		font-weight:bold;
-		font-size:5em;
-		display:inline-block;
-		transform:scaleX(1.4);
-		letter-spacing:0.05em;
+		font-weight: bold;
+		font-size: 5em;
+		display: inline-block;
+		transform: scaleX(1.4);
+		letter-spacing: 0.05em;
 	}
 
-	& .resto {
+	& .resto{
 		font-family: 'croissant';
 	}
 }
@@ -285,7 +284,7 @@ footer {
 	width: 98%;
 	position: fixed;
 	bottom: 0px;
-	font-size: 1.5em;
+	font-size: 2em;
 	align-items: center;
 	justify-content: space-between;
 	padding: 1%;
@@ -299,13 +298,14 @@ footer {
 .prochain {
 	display: flex;
 	margin: auto;
+	margin-top:0;
 	padding-left: 2%;
 	padding-right: 2%;
-	font-size: 1.6em;
+	font-size: 2.5em;
 	border-radius: 12px;
 	line-height: 0em;
 	flex-direction: row;
-
+	
 	& span {
 		display: inline-block;
 		width: 0.4em;
@@ -330,9 +330,10 @@ footer {
 
 /******LES CARTES*******/
 
-.body-carte{
-	height:100em;
-	
+.body-carte {
+	height: 115em;
+	font-family: 'Segoe Print';
+	font-size:1.8em;
 }
 
 
@@ -341,10 +342,10 @@ footer {
 	flex-direction: column;
 	align-items: center;
 	justify-content: center;
-	border: 2px dotted green;
+	
+	
 
 	& .premier p{
-		animation: zoom-menu paused;
 		text-align:center;
 	}
 	
@@ -353,31 +354,82 @@ footer {
 	
 h1{
 	text-align:center;
+	font-family:inter;
+	font-size:3.5em;
+	margin-top:7%;
+	
 }
 
-li{
-	font-family:'Segoe Print';
+h2 {
+	font-size: 3.2em;
+	margin-bottom:0;
 }
+
+h3 {
+	font-size: 1.6em;
+	margin:0;
+	margin-top:5%;
+}
+
+h4{
+	font-size:2.8em;
+	margin:0;
+}
+
+.fin{
+	display:flex;
+	flex-direction:row;
+	justify-content:center;
+	margin-top:5%;
+	& i{
+		margin-right:2%;
+	}
+	}
+
+
+
 
 .carte {
 	box-shadow: 0 0 1em rgba(0,0,0,0.2);
 	width: 70%;
 	display: flex;
 	flex-direction: column;
-	/*align-items: center;*/
 	justify-content: center;
-	padding: 5%;
+	padding: 10%;
 	margin-bottom: 0;
 
+	&.premier {
+		padding: 5%;
+
+		& span {
+			font-weight: bold;
+		}
+	}
+
+	&.deuxieme {
+		font-weight: normal;
+	}
+
+	&.troisieme, &.quatrieme {
+		& h3,& span {
+			font-size: 1.2em;
+			font-weight: normal;
+		}
+
+	}
 
 	& .plats {
 		display: flex;
 		flex-direction: column;
 		position: relative;
-		border: 1px solid blue;
+		border: 2px solid red;
+
 
 		& span {
 			float: right;
+			display:flex;
+			align-items:flex-end;
+		
 		}
 
 		& h3 {
@@ -392,7 +444,7 @@ li{
 				left: 0;
 				bottom: 0;
 				width: 0;
-				height: 2px;
+				height: 4px;
 				background-color: black;
 				transition: width 1s ease;
 			}
@@ -404,17 +456,22 @@ li{
 
 		& .trait_g {
 			position: absolute;
-			left: -0.5%;
+			left: -11%;
 			width: 40%;
 
 			&.trait_chic {
-				left: -1%;
+			}
+
+			&.trait_note {
+				left: -0.5%;
+				height: 1.5%;
+				width: 30%;
 			}
 		}
 
 		& .trait_d {
 			position: absolute;
-			left: 61%;
+			left: 71%;
 			width: 40%;
 
 			&.trait_chic, &.trait_delice, &.trait_palette {
@@ -422,39 +479,70 @@ li{
 			}
 
 			&.trait_delice, &.trait_palette {
-				left: 60%;
+			}
+
+			&.trait_note {
+				width: 30%;
+				height: 1.5%;
 			}
 		}
 
 		& .entree {
-			top: -6%;
+			top: 1%;
+
+			&.trait_note {
+				top: 2%;
+			}
 
 			&.trait_chic {
 				filter: hue-rotate(137deg) brightness(120%);
+
+				& + h3, & + ul {
+					color: rgb(199,116,18);
+				}
 			}
 		}
 
 		& .plat {
-			top: 30%;
+			top: 34%;
 
 			&.trait_delice {
 				filter: brightness(180%);
+				top: 34.5%;
 			}
 
 			&.trait_chic {
-				
 				filter: hue-rotate(33deg) saturate(83%);
+
+				& + h3, & + ul {
+					color: rgb(165,103,153);
+				}
+			}
+
+			&.trait_note {
+				top: 39%;
 			}
 		}
 
 		& .dessert {
-			top: 60%;
+			top: 67%;
 
 			&.trait_delice {
 				filter: brightness(360%);
+				top: 68.5%;
+			}
+
+			&.trait_note {
+				top: 70%;
+			}
+
+			&.trait_chic {
+				& + h3, & + ul {
+					color: rgb(144,91,253);
+				}
 			}
 		}
-		/*filter: invert(48%) sepia(50%) saturate(3207%) hue-rotate(20deg);*/
+
 		& .trait_note { /*Exception pour diminuer l'image du trait de gauche dans menu note enchantee*/
 			height: 3%;
 		}
@@ -464,9 +552,9 @@ li{
 
 		& ul {
 			text-align: left;
-			border: 1px solid red;
 			list-style-type: none;
 			padding: 0;
+			line-height: 3;
 		}
 	}
 
