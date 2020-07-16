@@ -199,10 +199,10 @@ i {
 .premier .resto, .premier h2, .premier h4 {
   font-family: "courgette";
   font-weight: bold;
+  font-size: 2.5em;
 }
 
 .deuxieme {
-  font-family: "bodonixt";
   background-color: #fff5fe;
 }
 .deuxieme .resto {
@@ -224,9 +224,11 @@ i {
   display: inline-block;
   transform: scaleX(1.4);
   letter-spacing: 0.05em;
+  font-family: bodonixt;
 }
 .deuxieme .resto {
   font-family: "croissant";
+  font-size: 2.5em;
 }
 
 .troisieme {
@@ -276,7 +278,7 @@ footer {
   width: 98%;
   position: fixed;
   bottom: 0px;
-  font-size: 2em;
+  font-size: 40px;
   align-items: center;
   justify-content: space-between;
   padding: 1%;
@@ -321,33 +323,46 @@ footer:hover > div {
   font-family: "Segoe Print";
   font-size: 1.8em;
 }
+.body-carte.premier {
+  height: 125em;
+}
 
 .grande-carte {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  /*& .premier p{
+  	text-align:center;
+  }*/
 }
-.grande-carte .premier p {
+
+.premiere_note {
   text-align: center;
+  margin: 0;
+  font-size: 1.6em;
+}
+.premiere_note + h2 {
+  margin-top: 2%;
 }
 
 h1 {
   text-align: center;
   font-family: inter;
-  font-size: 3.5em;
+  font-size: 2.8em;
   margin-top: 7%;
 }
 
 h2 {
   font-size: 3.2em;
-  margin-bottom: 0;
+  margin-bottom: 7%;
 }
 
 h3 {
   font-size: 1.6em;
   margin: 0;
   margin-top: 5%;
+  /*border:1px solid blue;*/
 }
 
 h4 {
@@ -377,11 +392,12 @@ h4 {
 .carte.premier {
   padding: 5%;
 }
-.carte.premier span {
+.carte.premier .prix {
   font-weight: bold;
 }
 .carte.deuxieme {
   font-weight: normal;
+  font-family: bodonixt;
 }
 .carte.troisieme h3, .carte.troisieme span, .carte.quatrieme h3, .carte.quatrieme span {
   font-size: 1.2em;
@@ -392,11 +408,14 @@ h4 {
   flex-direction: column;
   position: relative;
   border: 2px solid red;
+  margin-bottom: 6%;
 }
 .carte .plats span {
   float: right;
   display: flex;
   align-items: flex-end;
+  border: 2px dotted green;
+  clear: right;
 }
 .carte .plats h3 {
   background-color: none;
@@ -448,8 +467,10 @@ h4 {
 .carte .plats .entree.trait_chic {
   filter: hue-rotate(137deg) brightness(120%);
 }
-.carte .plats .entree.trait_chic + h3, .carte .plats .entree.trait_chic + ul {
+.carte .plats .entree.trait_chic + h3, .carte .plats .entree.trait_chic + div {
+  /*un grand div apres entree et trait-chic afin de tout coloriser*/
   color: #c77412;
+  letter-spacing: 0.05em;
 }
 .carte .plats .plat {
   top: 34%;
@@ -461,8 +482,9 @@ h4 {
 .carte .plats .plat.trait_chic {
   filter: hue-rotate(33deg) saturate(83%);
 }
-.carte .plats .plat.trait_chic + h3, .carte .plats .plat.trait_chic + ul {
+.carte .plats .plat.trait_chic + h3, .carte .plats .plat.trait_chic + div {
   color: #a56799;
+  letter-spacing: 0.05em;
 }
 .carte .plats .plat.trait_note {
   top: 39%;
@@ -477,8 +499,9 @@ h4 {
 .carte .plats .dessert.trait_note {
   top: 70%;
 }
-.carte .plats .dessert.trait_chic + h3, .carte .plats .dessert.trait_chic + ul {
+.carte .plats .dessert.trait_chic + h3, .carte .plats .dessert.trait_chic + div {
   color: #905bfd;
+  letter-spacing: 0.05em;
 }
 .carte .plats .trait_note {
   /*Exception pour diminuer l'image du trait de gauche dans menu note enchantee*/
@@ -490,8 +513,40 @@ h4 {
   padding: 0;
   line-height: 3;
 }
+.carte .plats ul span {
+  font-size: 1.5em;
+}
 .carte i, .carte h2, .carte h3, .carte h4 {
   text-align: center;
+}
+.carte li {
+  border: 1px solid red;
+}
+
+.paragraphe {
+  margin-top: 3%;
+  margin-bottom: 5%;
+}
+
+.choix {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  /*border:1px solid black;*/
+  margin-top: 2%;
+}
+
+.nom {
+  font-size: 1em;
+  text-align: left;
+  margin: 0;
+}
+
+.prix {
+  text-align: right;
+  font-size: 1.3em;
+  margin: 0;
+  /*border:1px dotted green;*/
 }
 
 /*# sourceMappingURL=style.css.map */

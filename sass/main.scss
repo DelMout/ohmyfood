@@ -225,6 +225,7 @@ i {
 	& .resto,& h2,& h4{
 		font-family:'courgette';
 		font-weight:bold;
+		font-size:2.5em;
 	}
 }
 
@@ -233,7 +234,7 @@ i {
 	$couleur-debut-degrade: rgb(199,116,18);
 	$couleur-fin-degrade: rgb(144,91,253);
 	$couleur-menu: rgb(199,116,18);
-	font-family: 'bodonixt';
+	
 
 	@include mep-quatre-menus($couleur-fond,$couleur-debut-degrade,$couleur-fin-degrade,$couleur-menu);
 
@@ -243,10 +244,12 @@ i {
 		display: inline-block;
 		transform: scaleX(1.4);
 		letter-spacing: 0.05em;
+		font-family:bodonixt;
 	}
 
-	& .resto{
+	& .resto {
 		font-family: 'croissant';
+		font-size: 2.5em;
 	}
 }
 
@@ -284,10 +287,11 @@ footer {
 	width: 98%;
 	position: fixed;
 	bottom: 0px;
-	font-size: 2em;
+	font-size: 40px;
 	align-items: center;
 	justify-content: space-between;
 	padding: 1%;
+	
 
 	&:hover>div{
 		animation:mention 3s infinite;
@@ -334,6 +338,9 @@ footer {
 	height: 115em;
 	font-family: 'Segoe Print';
 	font-size:1.8em;
+	&.premier{
+		height:125em;
+	}
 }
 
 
@@ -345,30 +352,43 @@ footer {
 	
 	
 
-	& .premier p{
+	/*& .premier p{
 		text-align:center;
-	}
+	}*/
 	
 }
 
+.premiere_note{
+	text-align:center;
+	margin:0;
+	font-size:1.6em;
+	&+h2{
+		margin-top:2%;
+		
+	}
+}
 	
 h1{
 	text-align:center;
 	font-family:inter;
-	font-size:3.5em;
+	font-size:2.8em;
 	margin-top:7%;
+
 	
 }
 
 h2 {
 	font-size: 3.2em;
-	margin-bottom:0;
+	margin-bottom:7%;
+	
+
 }
 
 h3 {
 	font-size: 1.6em;
 	margin:0;
 	margin-top:5%;
+	/*border:1px solid blue;*/
 }
 
 h4{
@@ -401,21 +421,21 @@ h4{
 	&.premier {
 		padding: 5%;
 
-		& span {
+		& .prix {
 			font-weight: bold;
 		}
 	}
 
 	&.deuxieme {
 		font-weight: normal;
+		font-family: bodonixt;
 	}
 
 	&.troisieme, &.quatrieme {
-		& h3,& span {
+		& h3, & span {
 			font-size: 1.2em;
 			font-weight: normal;
 		}
-
 	}
 
 	& .plats {
@@ -423,13 +443,16 @@ h4{
 		flex-direction: column;
 		position: relative;
 		border: 2px solid red;
+		margin-bottom:6%;
+
 
 
 		& span {
 			float: right;
-			display:flex;
-			align-items:flex-end;
-		
+			display: flex;
+			align-items: flex-end;
+			border: 2px dotted green;
+			clear: right;
 		}
 
 		& h3 {
@@ -497,8 +520,9 @@ h4{
 			&.trait_chic {
 				filter: hue-rotate(137deg) brightness(120%);
 
-				& + h3, & + ul {
+				& + h3, & + div { /*un grand div apres entree et trait-chic afin de tout coloriser*/
 					color: rgb(199,116,18);
+					letter-spacing: 0.05em;
 				}
 			}
 		}
@@ -514,8 +538,9 @@ h4{
 			&.trait_chic {
 				filter: hue-rotate(33deg) saturate(83%);
 
-				& + h3, & + ul {
+				& + h3, & + div {
 					color: rgb(165,103,153);
+					letter-spacing: 0.05em;
 				}
 			}
 
@@ -537,8 +562,9 @@ h4{
 			}
 
 			&.trait_chic {
-				& + h3, & + ul {
+				& + h3, & + div {
 					color: rgb(144,91,253);
+					letter-spacing: 0.05em;
 				}
 			}
 		}
@@ -555,12 +581,50 @@ h4{
 			list-style-type: none;
 			padding: 0;
 			line-height: 3;
+
+
+
+			& span {
+				font-size: 1.5em;
+			}
 		}
 	}
 
 	& i, h2, h3, h4 {
 		text-align: center;
 	}
+
+	li {
+		border: 1px solid red;
+	}
+}
+
+.paragraphe{
+	margin-top:3%;
+	margin-bottom:5%;
+}
+
+.choix{
+	display:flex;
+	align-items:baseline;
+	justify-content:space-between;
+	/*border:1px solid black;*/
+	margin-top:2%;
+	
+}
+
+.nom{
+	font-size:1em;
+	text-align:left;
+	margin:0;
+		
+}
+.prix {
+	text-align:right;
+	font-size: 1.3em;
+	margin:0;
+	/*border:1px dotted green;*/
+	
 }
 
 
