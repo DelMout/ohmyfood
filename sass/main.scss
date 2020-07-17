@@ -349,13 +349,6 @@ footer {
 	flex-direction: column;
 	align-items: center;
 	justify-content: center;
-	
-	
-
-	/*& .premier p{
-		text-align:center;
-	}*/
-	
 }
 
 .premiere_note{
@@ -363,8 +356,7 @@ footer {
 	margin:0;
 	font-size:1.6em;
 	&+h2{
-		margin-top:2%;
-		
+		margin-top:2%;	
 	}
 }
 	
@@ -372,25 +364,19 @@ h1{
 	text-align:center;
 	font-family:Arial,inter;
 	font-size:2.8em;
-	margin-top:7%;
-
-	
+	margin-top:7%;	
 }
 
 h2 {
 	font-size: 3.2em;
-	/*margin-bottom:7%;*/
 	font-weight:normal;
 	text-align:center;
-	
-
 }
 
 h3 {
 	font-size: 1.6em;
 	margin:0;
 	margin-top:5%;
-	/*border:1px solid blue;*/
 }
 
 h4{
@@ -436,8 +422,6 @@ h4{
 			font-size: 1.4em;
 		}
 
-
-
 		& .titre_h3{
 			&.entree h3::after { /*soulignement titre de meme couleur que le texte*/
 				background-color: rgb(199,116,18);
@@ -474,7 +458,6 @@ h4{
 		display: flex;
 		flex-direction: column;
 		position: relative;
-		border: 2px solid red; /*bordure!!!!*/
 		margin-bottom: 6%;
 
 
@@ -506,8 +489,7 @@ h4{
 	align-items: center;
 	margin-top:5%;
 	margin-bottom:0;
-	/*border:1px solid blue;*/
-
+	
 	& .trait {
 		width: 30%;
 
@@ -538,7 +520,6 @@ h4{
 		display: flex;
 		align-items: baseline;
 		justify-content: space-between;
-		/*border:1px solid black;*/
 		margin-top: 2%;
 }
 
@@ -552,8 +533,7 @@ h4{
 		text-align: right;
 		font-size: 1.3em;
 		margin: 0;
-		/*border:1px dotted green;*/
-	}
+}
 
 
 .trait_chic {
@@ -604,89 +584,180 @@ h4{
 
 
 
-		/******MEDIA QUERIES*******/
-		@media only screen and (max-width: 992px) { /*tablette*/
-			body {
-				height: 220em;
-			}
+/******MEDIA QUERIES*******/
+@media only screen and (max-width: 992px) { /*tablette*/
+body{
+		height: 190em;
+}
 
-			img {
-				width: 40%;
-			}
+.accueil-menu{
+	height:100%;
+}
 
-			.quatre_menus {
-				flex-direction: column;
-				padding-bottom: 8%;
-				padding-top: 8%;
-				border: 1px solid black;
+img {
+	width: 40%;
+}
 
-				& a {
-					height: 23%;
-					width: 95%;
-				}
+.quatre_menus {
+	flex-direction: column;
+	padding-bottom: 15%;
+	padding-top: 15%;
+	/*border: 1px solid black;*/
+	height:80%;
 
-				& .resto {
-					font-size: 2em;
-				}
+	& a {
+		height: 22%;
+		width: 95%;
+	}
 
-				& .menu {
-					font-size: 2em;
-				}
-			}
+	& .resto {
+		font-size: 2em;
+	}
 
-			.prochain {
-				padding-right: 4%;
-				font-size: 1.8em;
+	& .menu {
+		font-size: 2em;
+	}
+}
 
-				& span {
-					transform: scale(0.8);
-				}
-			}
-
-			footer {
-				font-size: 30px;
-			}
-
-			h1 {
-				font-size: 2em;
-			}
-
-			.premiere_note {
-				& + h2 {
-					font-size: 1.5em;
-				}
-
-				& i {
-					font-size: 1.5em;
-				}
-			}
-
-			.carte .resto {
-				font-size: 1.5em;
-			}
-
-			h3 {
-				font-size: 1em;
-			}
-
-			.fin {
-				& h4, & i {
-					font-size: 1.5em;
-				}
-			}
-
-			.nom {
-				font-size: 0.8em;
-			}
-
-			.prix {
-				font-size: 0.9em;
-			}
-
-			.premier .plats .trait_note {
-				width: 3%;
-			}
+	.prochain {
+		padding-right: 4%;
+		font-size: 1.8em;
+		margin-bottom: 0;
+		-moz-align-items: center;	/*pour firefox*/
+		align-items: center;	/*pour chrome*/
+		& span {
+			transform: scale(0.8);
 		}
+	}
+
+footer {
+	font-size: 30px;
+}
+
+h1 {
+	font-size: 2em;
+}
+/*Tablette***CARTES*/
+
+.body-carte{
+	height:85em;
+	border:3px dotted blue;
+	&.deuxieme{
+		height:70em;
+	}
+}
+
+.grande-carte{
+	/*height:100%;*/
+	border:2px solid red;
+}
+	.carte {
+		width: 85%;
+		/*height:85%;*/
+		border: 2px solid green;
+		/*height:100%;*/
+	}
+
+.premiere_note {
+	& + h2 {
+		font-size: 1.5em;
+	}
+
+		& i {
+			font-size: 1.5em;
+			margin-top:5%;
+		}
+}
+
+.carte .resto {
+	font-size: 1.5em;
+}
+
+h3 {
+	font-size: 1em;
+}
+
+.fin {
+	& h4, & i {
+		font-size: 1.5em;
+		margin-bottom:5%;
+	}
+}
+
+.nom {
+	font-size: 0.8em;
+}
+
+.prix {
+	font-size: 0.9em;
+}
+
+.deuxieme{
+	& .titre_h3{
+		font-size:.7em;
+		width:50%;
+	}
+	& .trait{
+		width:25%;
+	}
+	& .nom{
+		font-size:0.7em;
+	}
+	& .prix{
+		font-size:0.8em;
+	}
+}
+
+.troisieme {
+	& .resto {
+			font-size: 2em;
+	}
+
+	& .titre_h3 {
+			font-size: .8em;
+			width: 50%;
+	}
+
+	& .trait {
+			width: 25%;
+	}
+
+	& .nom {
+			font-size: 0.7em;
+	}
+
+	& .prix {
+			font-size: 0.8em;
+		}
+	}
+
+.quatrieme {
+	& .resto {
+			font-size: 2.2em;
+	}
+
+	& .titre_h3 {
+			font-size: .8em;
+			width: 50%;
+	}
+
+	& .trait {
+			width: 25%;
+	}
+
+	& .nom {
+			font-size: 0.7em;
+	}
+
+	& .prix {
+			font-size: 0.8em;
+	}
+	}
+
+
+}
+
+
 
 		@media only screen and (max-width: 767px) { /*mobile*/
 		}
