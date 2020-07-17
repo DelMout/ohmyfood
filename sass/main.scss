@@ -255,7 +255,7 @@ i {
 
 .troisieme {
 	$couleur-fond: rgb(249,249,249);
-	$couleur-debut-degrade: rgb(6,69,229);
+	$couleur-debut-degrade: rgb(4,49,223);
 	$couleur-fin-degrade: rgb(8,135,251);
 	$couleur-menu: rgb(8,135,251);
 
@@ -370,7 +370,7 @@ footer {
 	
 h1{
 	text-align:center;
-	font-family:inter;
+	font-family:Arial,inter;
 	font-size:2.8em;
 	margin-top:7%;
 
@@ -379,7 +379,9 @@ h1{
 
 h2 {
 	font-size: 3.2em;
-	margin-bottom:7%;
+	/*margin-bottom:7%;*/
+	font-weight:normal;
+	text-align:center;
 	
 
 }
@@ -429,31 +431,52 @@ h4{
 	&.deuxieme {
 		font-weight: normal;
 		font-family: bodonixt;
+		padding-right:2%;
+		padding-left:2%;
+		& h3{
+			font-size:1.4em;
+			
+		}
+
+		& .paragraphe{
+			margin-left:10%;
+			margin-right:10%;
+			margin-top:2%;
+			border:1px dotted blue;
+			
+		}
+
+		& .entree + h3::after {
+			background-color: rgb(199,116,18);
+		}
+
+		& .plat + h3::after {
+			background-color: rgb(165,103,153);
+		}
+
+		& .dessert + h3::after {
+			background-color: rgb(144,91,253);
+		}
 	}
 
 	&.troisieme, &.quatrieme {
-		& h3, & span {
+		& h3 {
 			font-size: 1.2em;
 			font-weight: normal;
 		}
 	}
 
+
+
+
+
 	& .plats {
 		display: flex;
 		flex-direction: column;
 		position: relative;
-		border: 2px solid red;
-		margin-bottom:6%;
+		border: 2px solid red;	/*bordure!!!!*/
+		margin-bottom: 6%;
 
-
-
-		& span {
-			float: right;
-			display: flex;
-			align-items: flex-end;
-			border: 2px dotted green;
-			clear: right;
-		}
 
 		& h3 {
 			background-color: none;
@@ -482,155 +505,222 @@ h4{
 			left: -11%;
 			width: 40%;
 
-			&.trait_chic {
-			}
-
-			&.trait_note {
-				left: -0.5%;
-				height: 1.5%;
-				width: 30%;
-			}
+			
 		}
 
 		& .trait_d {
-			position: absolute;
-			left: 71%;
-			width: 40%;
-
 			&.trait_chic, &.trait_delice, &.trait_palette {
 				transform: scaleX(-1);
 			}
 
-			&.trait_delice, &.trait_palette {
-			}
+			
 
-			&.trait_note {
-				width: 30%;
-				height: 1.5%;
-			}
+			
 		}
 
 		& .entree {
 			top: 1%;
 
-			&.trait_note {
-				top: 2%;
+			
 			}
 
-			&.trait_chic {
-				filter: hue-rotate(137deg) brightness(120%);
-
-				& + h3, & + div { /*un grand div apres entree et trait-chic afin de tout coloriser*/
-					color: rgb(199,116,18);
-					letter-spacing: 0.05em;
-				}
+			&.trait_palette {
+				top: 1.6%;
 			}
-		}
+	}
 
-		& .plat {
-			top: 34%;
+	& .plat {
+			top: 35%;
 
 			&.trait_delice {
 				filter: brightness(180%);
 				top: 34.5%;
 			}
 
-			&.trait_chic {
-				filter: hue-rotate(33deg) saturate(83%);
+			
+	
+	}
 
-				& + h3, & + div {
-					color: rgb(165,103,153);
-					letter-spacing: 0.05em;
+		
+
+	
+	/*& i, h2, h3, h4 {
+		text-align: center;
+	}*/
+	
+}
+.titre {
+	display: flex;
+	align-items: center;
+	margin-top:5%;
+	margin-bottom:0;
+	/*border:1px solid blue;*/
+
+	& .trait {
+		width: 30%;
+
+		& img {
+			width: 100%;
+		}
+
+		& .t_droit {
+			transform: scaleX(-1);
+		}
+	}
+
+	& .titre_h3 {
+		display: flex;
+		width: 40%;
+		align-items: center;
+
+		& h3 {
+			margin: auto;
+		}
+	}
+}
+.paragraphe {
+		margin-bottom: 5%;
+}
+
+.choix {
+		display: flex;
+		align-items: baseline;
+		justify-content: space-between;
+		/*border:1px solid black;*/
+		margin-top: 2%;
+}
+
+.nom {
+		font-size: 1em;
+		text-align: left;
+		margin: 0;
+}
+
+.prix {
+		text-align: right;
+		font-size: 1.3em;
+		margin: 0;
+		/*border:1px dotted green;*/
+	}
+
+
+.trait_chic {
+	&.entree {
+		filter: hue-rotate(137deg) brightness(120%);
+	}
+
+	& .plat {
+		filter: hue-rotate(33deg) saturate(83%);
+	}
+
+	& .dessert {
+		filter: brightness(360%);
+	}
+}
+
+.deuxieme {
+	& .entree {
+		color: rgb(199,116,18);
+		letter-spacing: 0.05em;
+	}
+
+	& .plat {
+		color: rgb(165,103,153);
+		letter-spacing: 0.05em;
+	}
+
+	& .dessert {
+		color: rgb(144,91,253);
+		letter-spacing: 0.05em;
+	}
+}
+		
+
+
+
+		/******MEDIA QUERIES*******/
+		@media only screen and (max-width: 992px) { /*tablette*/
+			body {
+				height: 220em;
+			}
+
+			img {
+				width: 40%;
+			}
+
+			.quatre_menus {
+				flex-direction: column;
+				padding-bottom: 8%;
+				padding-top: 8%;
+				border: 1px solid black;
+
+				& a {
+					height: 23%;
+					width: 95%;
+				}
+
+				& .resto {
+					font-size: 2em;
+				}
+
+				& .menu {
+					font-size: 2em;
 				}
 			}
 
-			&.trait_note {
-				top: 39%;
-			}
-		}
+			.prochain {
+				padding-right: 4%;
+				font-size: 1.8em;
 
-		& .dessert {
-			top: 67%;
-
-			&.trait_delice {
-				filter: brightness(360%);
-				top: 68.5%;
-			}
-
-			&.trait_note {
-				top: 70%;
-			}
-
-			&.trait_chic {
-				& + h3, & + div {
-					color: rgb(144,91,253);
-					letter-spacing: 0.05em;
+				& span {
+					transform: scale(0.8);
 				}
 			}
-		}
 
-		& .trait_note { /*Exception pour diminuer l'image du trait de gauche dans menu note enchantee*/
-			height: 3%;
-		}
+			footer {
+				font-size: 30px;
+			}
 
+			h1 {
+				font-size: 2em;
+			}
 
+			.premiere_note {
+				& + h2 {
+					font-size: 1.5em;
+				}
 
+				& i {
+					font-size: 1.5em;
+				}
+			}
 
-		& ul {
-			text-align: left;
-			list-style-type: none;
-			padding: 0;
-			line-height: 3;
-
-
-
-			& span {
+			.carte .resto {
 				font-size: 1.5em;
 			}
+
+			h3 {
+				font-size: 1em;
+			}
+
+			.fin {
+				& h4, & i {
+					font-size: 1.5em;
+				}
+			}
+
+			.nom {
+				font-size: 0.8em;
+			}
+
+			.prix {
+				font-size: 0.9em;
+			}
+
+			.premier .plats .trait_note {
+				width: 3%;
+			}
 		}
-	}
 
-	& i, h2, h3, h4 {
-		text-align: center;
-	}
-
-	li {
-		border: 1px solid red;
-	}
-}
-
-.paragraphe{
-	margin-top:3%;
-	margin-bottom:5%;
-}
-
-.choix{
-	display:flex;
-	align-items:baseline;
-	justify-content:space-between;
-	/*border:1px solid black;*/
-	margin-top:2%;
-	
-}
-
-.nom{
-	font-size:1em;
-	text-align:left;
-	margin:0;
-		
-}
-.prix {
-	text-align:right;
-	font-size: 1.3em;
-	margin:0;
-	/*border:1px dotted green;*/
-	
-}
-
-
-
-	@media only screen and (max-width: 992px) {
-	}
-
-	@media only screen and (max-width: 767px) {
-	}
+		@media only screen and (max-width: 767px) { /*mobile*/
+		}

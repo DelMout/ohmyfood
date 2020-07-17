@@ -235,7 +235,7 @@ i {
   background-color: #f9f9f9;
 }
 .troisieme .resto {
-  background: linear-gradient(45deg, #0645e5 0%, #0887fb 100%);
+  background: linear-gradient(45deg, #0431df 0%, #0887fb 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   font-family: Arial;
@@ -348,14 +348,16 @@ footer:hover > div {
 
 h1 {
   text-align: center;
-  font-family: inter;
+  font-family: Arial, inter;
   font-size: 2.8em;
   margin-top: 7%;
 }
 
 h2 {
   font-size: 3.2em;
-  margin-bottom: 7%;
+  /*margin-bottom:7%;*/
+  font-weight: normal;
+  text-align: center;
 }
 
 h3 {
@@ -388,6 +390,9 @@ h4 {
   justify-content: center;
   padding: 10%;
   margin-bottom: 0;
+  /*& i, h2, h3, h4 {
+  	text-align: center;
+  }*/
 }
 .carte.premier {
   padding: 5%;
@@ -398,8 +403,28 @@ h4 {
 .carte.deuxieme {
   font-weight: normal;
   font-family: bodonixt;
+  padding-right: 2%;
+  padding-left: 2%;
 }
-.carte.troisieme h3, .carte.troisieme span, .carte.quatrieme h3, .carte.quatrieme span {
+.carte.deuxieme h3 {
+  font-size: 1.4em;
+}
+.carte.deuxieme .paragraphe {
+  margin-left: 10%;
+  margin-right: 10%;
+  margin-top: 2%;
+  border: 1px dotted blue;
+}
+.carte.deuxieme .entree + h3::after {
+  background-color: #c77412;
+}
+.carte.deuxieme .plat + h3::after {
+  background-color: #a56799;
+}
+.carte.deuxieme .dessert + h3::after {
+  background-color: #905bfd;
+}
+.carte.troisieme h3, .carte.quatrieme h3 {
   font-size: 1.2em;
   font-weight: normal;
 }
@@ -408,14 +433,8 @@ h4 {
   flex-direction: column;
   position: relative;
   border: 2px solid red;
+  /*bordure!!!!*/
   margin-bottom: 6%;
-}
-.carte .plats span {
-  float: right;
-  display: flex;
-  align-items: flex-end;
-  border: 2px dotted green;
-  clear: right;
 }
 .carte .plats h3 {
   background-color: none;
@@ -441,90 +460,49 @@ h4 {
   left: -11%;
   width: 40%;
 }
-.carte .plats .trait_g.trait_note {
-  left: -0.5%;
-  height: 1.5%;
-  width: 30%;
-}
-.carte .plats .trait_d {
-  position: absolute;
-  left: 71%;
-  width: 40%;
-}
 .carte .plats .trait_d.trait_chic, .carte .plats .trait_d.trait_delice, .carte .plats .trait_d.trait_palette {
   transform: scaleX(-1);
-}
-.carte .plats .trait_d.trait_note {
-  width: 30%;
-  height: 1.5%;
 }
 .carte .plats .entree {
   top: 1%;
 }
-.carte .plats .entree.trait_note {
-  top: 2%;
+.carte .plats.trait_palette {
+  top: 1.6%;
 }
-.carte .plats .entree.trait_chic {
-  filter: hue-rotate(137deg) brightness(120%);
+.carte .plat {
+  top: 35%;
 }
-.carte .plats .entree.trait_chic + h3, .carte .plats .entree.trait_chic + div {
-  /*un grand div apres entree et trait-chic afin de tout coloriser*/
-  color: #c77412;
-  letter-spacing: 0.05em;
-}
-.carte .plats .plat {
-  top: 34%;
-}
-.carte .plats .plat.trait_delice {
+.carte .plat.trait_delice {
   filter: brightness(180%);
   top: 34.5%;
 }
-.carte .plats .plat.trait_chic {
-  filter: hue-rotate(33deg) saturate(83%);
+
+.titre {
+  display: flex;
+  align-items: center;
+  margin-top: 5%;
+  margin-bottom: 0;
+  /*border:1px solid blue;*/
 }
-.carte .plats .plat.trait_chic + h3, .carte .plats .plat.trait_chic + div {
-  color: #a56799;
-  letter-spacing: 0.05em;
+.titre .trait {
+  width: 30%;
 }
-.carte .plats .plat.trait_note {
-  top: 39%;
+.titre .trait img {
+  width: 100%;
 }
-.carte .plats .dessert {
-  top: 67%;
+.titre .trait .t_droit {
+  transform: scaleX(-1);
 }
-.carte .plats .dessert.trait_delice {
-  filter: brightness(360%);
-  top: 68.5%;
+.titre .titre_h3 {
+  display: flex;
+  width: 40%;
+  align-items: center;
 }
-.carte .plats .dessert.trait_note {
-  top: 70%;
-}
-.carte .plats .dessert.trait_chic + h3, .carte .plats .dessert.trait_chic + div {
-  color: #905bfd;
-  letter-spacing: 0.05em;
-}
-.carte .plats .trait_note {
-  /*Exception pour diminuer l'image du trait de gauche dans menu note enchantee*/
-  height: 3%;
-}
-.carte .plats ul {
-  text-align: left;
-  list-style-type: none;
-  padding: 0;
-  line-height: 3;
-}
-.carte .plats ul span {
-  font-size: 1.5em;
-}
-.carte i, .carte h2, .carte h3, .carte h4 {
-  text-align: center;
-}
-.carte li {
-  border: 1px solid red;
+.titre .titre_h3 h3 {
+  margin: auto;
 }
 
 .paragraphe {
-  margin-top: 3%;
   margin-bottom: 5%;
 }
 
@@ -547,6 +525,108 @@ h4 {
   font-size: 1.3em;
   margin: 0;
   /*border:1px dotted green;*/
+}
+
+.trait_chic.entree {
+  filter: hue-rotate(137deg) brightness(120%);
+}
+.trait_chic .plat {
+  filter: hue-rotate(33deg) saturate(83%);
+}
+.trait_chic .dessert {
+  filter: brightness(360%);
+}
+
+.deuxieme .entree {
+  color: #c77412;
+  letter-spacing: 0.05em;
+}
+.deuxieme .plat {
+  color: #a56799;
+  letter-spacing: 0.05em;
+}
+.deuxieme .dessert {
+  color: #905bfd;
+  letter-spacing: 0.05em;
+}
+
+/******MEDIA QUERIES*******/
+@media only screen and (max-width: 992px) {
+  /*tablette*/
+  body {
+    height: 220em;
+  }
+
+  img {
+    width: 40%;
+  }
+
+  .quatre_menus {
+    flex-direction: column;
+    padding-bottom: 8%;
+    padding-top: 8%;
+    border: 1px solid black;
+  }
+  .quatre_menus a {
+    height: 23%;
+    width: 95%;
+  }
+  .quatre_menus .resto {
+    font-size: 2em;
+  }
+  .quatre_menus .menu {
+    font-size: 2em;
+  }
+
+  .prochain {
+    padding-right: 4%;
+    font-size: 1.8em;
+  }
+  .prochain span {
+    transform: scale(0.8);
+  }
+
+  footer {
+    font-size: 30px;
+  }
+
+  h1 {
+    font-size: 2em;
+  }
+
+  .premiere_note + h2 {
+    font-size: 1.5em;
+  }
+  .premiere_note i {
+    font-size: 1.5em;
+  }
+
+  .carte .resto {
+    font-size: 1.5em;
+  }
+
+  h3 {
+    font-size: 1em;
+  }
+
+  .fin h4, .fin i {
+    font-size: 1.5em;
+  }
+
+  .nom {
+    font-size: 0.8em;
+  }
+
+  .prix {
+    font-size: 0.9em;
+  }
+
+  .premier .plats .trait_note {
+    width: 3%;
+  }
+}
+@media only screen and (max-width: 767px) {
+  /*mobile*/
 }
 
 /*# sourceMappingURL=style.css.map */
