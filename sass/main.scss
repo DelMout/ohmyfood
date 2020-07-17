@@ -431,35 +431,38 @@ h4{
 	&.deuxieme {
 		font-weight: normal;
 		font-family: bodonixt;
-		padding-right:2%;
-		padding-left:2%;
-		& h3{
-			font-size:1.4em;
-			
+
+		& h3 {
+			font-size: 1.4em;
 		}
 
-		& .paragraphe{
-			margin-left:10%;
-			margin-right:10%;
-			margin-top:2%;
-			border:1px dotted blue;
-			
-		}
 
-		& .entree + h3::after {
-			background-color: rgb(199,116,18);
-		}
 
-		& .plat + h3::after {
-			background-color: rgb(165,103,153);
-		}
+		& .titre_h3{
+			&.entree h3::after { /*soulignement titre de meme couleur que le texte*/
+				background-color: rgb(199,116,18);
+			}
 
-		& .dessert + h3::after {
-			background-color: rgb(144,91,253);
+			&.plat h3::after {
+				background-color: rgb(165,103,153);
+			}
+
+			&.dessert h3::after {
+				background-color: rgb(144,91,253);
+			}
 		}
 	}
 
-	&.troisieme, &.quatrieme {
+	&.deuxieme, &.troisieme, &.quatrieme {
+		padding-right: 2%;
+		padding-left: 2%;
+
+		& .paragraphe {
+			margin-left: 10%;
+			margin-right: 10%;
+			margin-top: 2%;
+		}
+
 		& h3 {
 			font-size: 1.2em;
 			font-weight: normal;
@@ -467,14 +470,11 @@ h4{
 	}
 
 
-
-
-
 	& .plats {
 		display: flex;
 		flex-direction: column;
 		position: relative;
-		border: 2px solid red;	/*bordure!!!!*/
+		border: 2px solid red; /*bordure!!!!*/
 		margin-bottom: 6%;
 
 
@@ -499,55 +499,7 @@ h4{
 				width: 100%;
 			}
 		}
-
-		& .trait_g {
-			position: absolute;
-			left: -11%;
-			width: 40%;
-
-			
-		}
-
-		& .trait_d {
-			&.trait_chic, &.trait_delice, &.trait_palette {
-				transform: scaleX(-1);
-			}
-
-			
-
-			
-		}
-
-		& .entree {
-			top: 1%;
-
-			
-			}
-
-			&.trait_palette {
-				top: 1.6%;
-			}
 	}
-
-	& .plat {
-			top: 35%;
-
-			&.trait_delice {
-				filter: brightness(180%);
-				top: 34.5%;
-			}
-
-			
-	
-	}
-
-		
-
-	
-	/*& i, h2, h3, h4 {
-		text-align: center;
-	}*/
-	
 }
 .titre {
 	display: flex;
@@ -609,11 +561,17 @@ h4{
 		filter: hue-rotate(137deg) brightness(120%);
 	}
 
-	& .plat {
+	&.plat {
 		filter: hue-rotate(33deg) saturate(83%);
 	}
+}
 
-	& .dessert {
+.trait_delice {
+	&.plat {
+		filter: brightness(180%);
+	}
+
+	&.dessert {
 		filter: brightness(360%);
 	}
 }
@@ -634,7 +592,15 @@ h4{
 		letter-spacing: 0.05em;
 	}
 }
-		
+
+.quatrieme{
+	& .nom{
+		font-size:0.9em;
+	}
+	& .prix{
+		font-size:1.1em;
+	}
+}		
 
 
 

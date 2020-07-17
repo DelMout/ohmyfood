@@ -390,9 +390,6 @@ h4 {
   justify-content: center;
   padding: 10%;
   margin-bottom: 0;
-  /*& i, h2, h3, h4 {
-  	text-align: center;
-  }*/
 }
 .carte.premier {
   padding: 5%;
@@ -403,28 +400,30 @@ h4 {
 .carte.deuxieme {
   font-weight: normal;
   font-family: bodonixt;
-  padding-right: 2%;
-  padding-left: 2%;
 }
 .carte.deuxieme h3 {
   font-size: 1.4em;
 }
-.carte.deuxieme .paragraphe {
+.carte.deuxieme .titre_h3.entree h3::after {
+  /*soulignement titre de meme couleur que le texte*/
+  background-color: #c77412;
+}
+.carte.deuxieme .titre_h3.plat h3::after {
+  background-color: #a56799;
+}
+.carte.deuxieme .titre_h3.dessert h3::after {
+  background-color: #905bfd;
+}
+.carte.deuxieme, .carte.troisieme, .carte.quatrieme {
+  padding-right: 2%;
+  padding-left: 2%;
+}
+.carte.deuxieme .paragraphe, .carte.troisieme .paragraphe, .carte.quatrieme .paragraphe {
   margin-left: 10%;
   margin-right: 10%;
   margin-top: 2%;
-  border: 1px dotted blue;
 }
-.carte.deuxieme .entree + h3::after {
-  background-color: #c77412;
-}
-.carte.deuxieme .plat + h3::after {
-  background-color: #a56799;
-}
-.carte.deuxieme .dessert + h3::after {
-  background-color: #905bfd;
-}
-.carte.troisieme h3, .carte.quatrieme h3 {
+.carte.deuxieme h3, .carte.troisieme h3, .carte.quatrieme h3 {
   font-size: 1.2em;
   font-weight: normal;
 }
@@ -454,27 +453,6 @@ h4 {
 }
 .carte .plats h3:hover::after {
   width: 100%;
-}
-.carte .plats .trait_g {
-  position: absolute;
-  left: -11%;
-  width: 40%;
-}
-.carte .plats .trait_d.trait_chic, .carte .plats .trait_d.trait_delice, .carte .plats .trait_d.trait_palette {
-  transform: scaleX(-1);
-}
-.carte .plats .entree {
-  top: 1%;
-}
-.carte .plats.trait_palette {
-  top: 1.6%;
-}
-.carte .plat {
-  top: 35%;
-}
-.carte .plat.trait_delice {
-  filter: brightness(180%);
-  top: 34.5%;
 }
 
 .titre {
@@ -530,10 +508,14 @@ h4 {
 .trait_chic.entree {
   filter: hue-rotate(137deg) brightness(120%);
 }
-.trait_chic .plat {
+.trait_chic.plat {
   filter: hue-rotate(33deg) saturate(83%);
 }
-.trait_chic .dessert {
+
+.trait_delice.plat {
+  filter: brightness(180%);
+}
+.trait_delice.dessert {
   filter: brightness(360%);
 }
 
@@ -548,6 +530,13 @@ h4 {
 .deuxieme .dessert {
   color: #905bfd;
   letter-spacing: 0.05em;
+}
+
+.quatrieme .nom {
+  font-size: 0.9em;
+}
+.quatrieme .prix {
+  font-size: 1.1em;
 }
 
 /******MEDIA QUERIES*******/
