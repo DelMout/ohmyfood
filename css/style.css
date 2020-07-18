@@ -679,6 +679,156 @@ h4 {
 }
 @media only screen and (max-width: 767px) {
   /*mobile*/
+  body {
+    height: 140em;
+  }
+
+  img {
+    width: 50%;
+  }
+
+  .quatre_menus {
+    justify-content: center;
+    padding-left: 5%;
+    padding-right: 5%;
+    width: 90%;
+  }
+  .quatre_menus a {
+    height: 20%;
+    width: 100%;
+    margin-bottom: 15%;
+  }
+  .quatre_menus .resto {
+    font-size: 2em;
+  }
+  .quatre_menus .menu {
+    font-size: 2em;
+  }
+
+  .prochain {
+    font-size: 1.4em;
+  }
+
+  footer {
+    font-size: 17px;
+    width: 94%;
+    padding-right: 3%;
+    padding-left: 3%;
+  }
+
+  /*Mobile***CARTES*/
+  .body-carte {
+    height: 100em;
+  }
+  .body-carte.premier {
+    height: 100em;
+  }
+  .body-carte.deuxieme {
+    height: 90em;
+  }
+
+  h1 {
+    font-size: 1.3em;
+  }
+
+  .deuxieme {
+    letter-spacing: 0em;
+  }
+  .deuxieme.resto {
+    font-size: 1.2em;
+  }
+  .deuxieme .titre .titre_h3 {
+    font-size: 0.65em;
+    font-weight: bold;
+  }
+  .deuxieme .prix {
+    font-weight: bold;
+  }
+  .deuxieme .titre {
+    height: 7%;
+    margin-top: 25%;
+  }
+
+  .troisieme.resto {
+    font-size: 1.2em;
+  }
+  .troisieme .titre .titre_h3 {
+    font-size: 0.65em;
+    font-weight: bold;
+  }
+  .troisieme .prix {
+    font-weight: bold;
+  }
+  .troisieme .titre {
+    height: 7%;
+    margin-top: 25%;
+  }
+  .troisieme .trait_delice.t_droit {
+    transform: scaleX(-1) scaleY(-1);
+  }
+
+  .quatrieme.resto {
+    font-size: 1.2em;
+  }
+  .quatrieme .titre .titre_h3 {
+    font-size: 0.8em;
+    font-weight: bold;
+  }
+  .quatrieme .prix {
+    font-weight: bold;
+  }
+  .quatrieme .titre {
+    height: 7%;
+    margin-top: 25%;
+  }
+  .quatrieme .trait_delice.t_droit {
+    transform: scaleX(-1) scaleY(-1);
+  }
+
+  .choix {
+    flex-direction: column;
+    margin-top: 8%;
+  }
+
+  .nom {
+    font-size: 0.7em;
+    /*width:100%;*/
+  }
+
+  .prix {
+    font-size: 0.8em;
+  }
+
+  .titre {
+    flex-direction: column;
+    margin-top: 10%;
+    /*border:4px dotted blue;*/
+  }
+  .titre .trait {
+    display: flex;
+    /*border: 3px solid green;*/
+    height: 20%;
+    width: 100%;
+    align-items: center;
+  }
+  .titre .titre_h3 {
+    font-size: 1em;
+    /*border: 3px dotted pink;*/
+    width: auto;
+    /*margin-top:10%;*/
+  }
+
+  .fin {
+    flex-direction: column;
+    margin-top: 0%;
+    align-items: center;
+  }
+  .fin i {
+    margin-right: 2%;
+  }
+  .fin h4 {
+    text-align: center;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
