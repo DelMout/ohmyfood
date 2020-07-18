@@ -291,10 +291,13 @@ footer {
 	align-items: center;
 	justify-content: space-between;
 	padding: 1%;
-	
 
-	&:hover>div{
-		animation:mention 3s infinite;
+	& .mentions:hover {
+		animation: mention 3s infinite;
+	}
+
+	& .contact:hover {
+		animation: mention 3s infinite;
 	}
 }
 
@@ -310,23 +313,27 @@ footer {
 	line-height: 0em;
 	flex-direction: row;
 	
+	& .points{
+		margin-left:4%;
+		margin-top:10%;
+		height:0.4em;
+		width:2.2em;
+		
+	}
+	
 	& span {
 		display: inline-block;
 		width: 0.4em;
 		height: 0.4em;
 		border-radius: 50%;
-		position: relative;
-		top: 42%;
-		left: 5%;
-		margin: 0.1em;
 		background-color: $couleur-logo;
 		animation: suspension 2s infinite ease-in-out;
 
-		&:nth-child(3) {
+		&:nth-child(2) {
 			animation-delay: 0.4s;
 		}
 
-		&:nth-child(4) {
+		&:nth-child(3) {
 			animation-delay: 0.8s;
 		}
 	}
@@ -620,142 +627,139 @@ img {
 }
 
 	.prochain {
-		padding-right: 4%;
 		font-size: 1.8em;
-		margin-bottom: 0;
-		-moz-align-items: center;	/*pour firefox*/
-		align-items: center;	/*pour chrome*/
+			
 		& span {
 			transform: scale(0.8);
 		}
 	}
 
 footer {
-	font-size: 30px;
-}
+		font-size: 30px;
+		width: 90%;
+		padding-right: 5%;
+		padding-left:5%;
+		}
 
 h1 {
-	font-size: 2em;
-}
-/*Tablette***CARTES*/
-
-.body-carte{
-	height:85em;
-	border:3px dotted blue;
-	&.deuxieme{
-		height:70em;
-	}
-}
-
-.grande-carte{
-	/*height:100%;*/
-	border:2px solid red;
-}
-	.carte {
-		width: 85%;
-		/*height:85%;*/
-		border: 2px solid green;
-		/*height:100%;*/
+		font-size: 2em;
 	}
 
-.premiere_note {
-	& + h2 {
-		font-size: 1.5em;
-	}
 
-		& i {
+	/*Tablette***CARTES*/
+.body-carte {
+	height: 85em;
+			&.deuxieme {
+				height: 70em;
+			}
+			&.premier{
+				height:85em;
+			}
+		}
+
+		.carte {
+			width: 85%;
+		}
+
+		.premiere_note {
+			& + h2 {
+				font-size: 1.5em;
+			}
+
+			& i {
+				font-size: 1.5em;
+				margin-top: 5%;
+			}
+		}
+
+		.carte .resto {
 			font-size: 1.5em;
-			margin-top:5%;
 		}
-}
 
-.carte .resto {
-	font-size: 1.5em;
-}
+		h3 {
+			font-size: 1em;
+		}
 
-h3 {
-	font-size: 1em;
-}
+		.fin {
+			& h4, & i {
+				font-size: 1.5em;
+				margin-bottom: 5%;
+			}
+		}
 
-.fin {
-	& h4, & i {
-		font-size: 1.5em;
-		margin-bottom:5%;
-	}
-}
-
-.nom {
-	font-size: 0.8em;
-}
-
-.prix {
-	font-size: 0.9em;
-}
-
-.deuxieme{
-	& .titre_h3{
-		font-size:.7em;
-		width:50%;
-	}
-	& .trait{
-		width:25%;
-	}
-	& .nom{
-		font-size:0.7em;
-	}
-	& .prix{
-		font-size:0.8em;
-	}
-}
-
-.troisieme {
-	& .resto {
-			font-size: 2em;
-	}
-
-	& .titre_h3 {
-			font-size: .8em;
-			width: 50%;
-	}
-
-	& .trait {
-			width: 25%;
-	}
-
-	& .nom {
-			font-size: 0.7em;
-	}
-
-	& .prix {
+		.nom {
 			font-size: 0.8em;
 		}
-	}
 
-.quatrieme {
-	& .resto {
-			font-size: 2.2em;
-	}
+		.prix {
+			font-size: 0.9em;
+		}
 
-	& .titre_h3 {
-			font-size: .8em;
-			width: 50%;
-	}
+		.deuxieme {
+			& .titre_h3 {
+				font-size: .7em;
+				width: 50%;
+			}
 
-	& .trait {
-			width: 25%;
-	}
+			& .trait {
+				width: 25%;
+			}
 
-	& .nom {
-			font-size: 0.7em;
-	}
+			& .nom {
+				font-size: 0.7em;
+			}
 
-	& .prix {
-			font-size: 0.8em;
-	}
-	}
+			& .prix {
+				font-size: 0.8em;
+			}
+		}
 
+		.troisieme {
+			& .resto {
+				font-size: 2em;
+			}
 
-}
+			& .titre_h3 {
+				font-size: .8em;
+				width: 50%;
+			}
+
+			& .trait {
+				width: 25%;
+			}
+
+			& .nom {
+				font-size: 0.7em;
+			}
+
+			& .prix {
+				font-size: 0.8em;
+			}
+		}
+
+		.quatrieme {
+			& .resto {
+				font-size: 2.2em;
+			}
+
+			& .titre_h3 {
+				font-size: .8em;
+				width: 50%;
+			}
+
+			& .trait {
+				width: 25%;
+			}
+
+			& .nom {
+				font-size: 0.7em;
+			}
+
+			& .prix {
+				font-size: 0.8em;
+			}
+		}
+	}
 
 
 

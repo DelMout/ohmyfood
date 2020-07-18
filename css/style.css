@@ -283,7 +283,10 @@ footer {
   justify-content: space-between;
   padding: 1%;
 }
-footer:hover > div {
+footer .mentions:hover {
+  animation: mention 3s infinite;
+}
+footer .contact:hover {
   animation: mention 3s infinite;
 }
 
@@ -298,22 +301,24 @@ footer:hover > div {
   line-height: 0em;
   flex-direction: row;
 }
+.prochain .points {
+  margin-left: 4%;
+  margin-top: 10%;
+  height: 0.4em;
+  width: 2.2em;
+}
 .prochain span {
   display: inline-block;
   width: 0.4em;
   height: 0.4em;
   border-radius: 50%;
-  position: relative;
-  top: 42%;
-  left: 5%;
-  margin: 0.1em;
   background-color: #fcca46;
   animation: suspension 2s infinite ease-in-out;
 }
-.prochain span:nth-child(3) {
+.prochain span:nth-child(2) {
   animation-delay: 0.4s;
 }
-.prochain span:nth-child(4) {
+.prochain span:nth-child(3) {
   animation-delay: 0.8s;
 }
 
@@ -563,13 +568,7 @@ h4 {
   }
 
   .prochain {
-    padding-right: 4%;
     font-size: 1.8em;
-    margin-bottom: 0;
-    -moz-align-items: center;
-    /*pour firefox*/
-    align-items: center;
-    /*pour chrome*/
   }
   .prochain span {
     transform: scale(0.8);
@@ -577,6 +576,9 @@ h4 {
 
   footer {
     font-size: 30px;
+    width: 90%;
+    padding-right: 5%;
+    padding-left: 5%;
   }
 
   h1 {
@@ -586,22 +588,16 @@ h4 {
   /*Tablette***CARTES*/
   .body-carte {
     height: 85em;
-    border: 3px dotted blue;
   }
   .body-carte.deuxieme {
     height: 70em;
   }
-
-  .grande-carte {
-    /*height:100%;*/
-    border: 2px solid red;
+  .body-carte.premier {
+    height: 85em;
   }
 
   .carte {
     width: 85%;
-    /*height:85%;*/
-    border: 2px solid green;
-    /*height:100%;*/
   }
 
   .premiere_note + h2 {
