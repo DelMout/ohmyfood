@@ -100,8 +100,8 @@ body {
 }
 
 @mixin mep-quatre-menus($couleur-fond: white,$couleur-debut-degrade: black,$couleur-fin-degrade: black,$couleur-menu: black,$police-resto: Arial, 
-$police-menu:'Segoe Print') {
-	background-color: $couleur-fond;
+$police-menu: 'Segoe Print') 
+{ background-color: $couleur-fond;
 
 	
 	& .resto {
@@ -116,7 +116,7 @@ $police-menu:'Segoe Print') {
 		font-size: 4em;
 		line-height: 2em;
 		color: $couleur-menu;
-		font-family: $police-menu;
+		font-family: $police-menu,'blokletters_normal';
 	}
 }
 
@@ -345,7 +345,7 @@ footer {
 	height: 115em;
 	font-family: 'Segoe Print';
 	font-size:1.8em;
-	&.premier{
+	&.prem{
 		height:125em;
 	}
 }
@@ -599,6 +599,7 @@ body{
 
 .accueil-menu{
 	height:100%;
+	
 }
 
 img {
@@ -612,11 +613,14 @@ img {
 		padding-top: 5%;
 		height: 88%;
 		flex-wrap: nowrap;
-		align-items:center;
+		align-items: center;
+		padding-left: 10%;
+		padding-right: 10%;
+		width: 80%;
 
 		& a {
 			height: 22%;
-			width: 95%;
+			width: 100%;
 		}
 
 		& .resto {
@@ -650,10 +654,10 @@ footer {
 	/*Tablette***CARTES*/
 .body-carte {
 	height: 85em;
-			&.deuxieme {
+			&.deux {
 				height: 70em;
 			}
-			&.premier{
+			&.prem{
 				height:85em;
 			}
 }
@@ -790,16 +794,19 @@ h1 {
 		/*padding-bottom: 5%;
 		padding-top: 5%;*/
 		height: 88%;
-	/*	border:2px solid pink;*/
+		/*	border:2px solid pink;*/
 		/*margin-right:2%;
 		margin-left:1%;*/
+		padding-left: 5%;
+		padding-right: 5%;
+		width: 90%;
 
 
 		& a {
 			/*height: 22%;
 			width: 100%;
 			margin-bottom: 15%;*/
-			border:2px dotted pink;
+			border: 2px dotted blue;
 		}
 
 		& .resto {
