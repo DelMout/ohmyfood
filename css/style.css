@@ -538,7 +538,7 @@ h4 {
 @media only screen and (max-width: 992px) {
   /*tablette*/
   body {
-    height: 190em;
+    height: 180em;
   }
 
   .accueil-menu {
@@ -551,10 +551,12 @@ h4 {
 
   .quatre_menus {
     flex-direction: column;
-    padding-bottom: 15%;
-    padding-top: 15%;
-    /*border: 1px solid black;*/
-    height: 80%;
+    justify-content: space-around;
+    padding-bottom: 5%;
+    padding-top: 5%;
+    height: 88%;
+    flex-wrap: nowrap;
+    align-items: center;
   }
   .quatre_menus a {
     height: 22%;
@@ -581,10 +583,6 @@ h4 {
     padding-left: 5%;
   }
 
-  h1 {
-    font-size: 2em;
-  }
-
   /*Tablette***CARTES*/
   .body-carte {
     height: 85em;
@@ -594,6 +592,10 @@ h4 {
   }
   .body-carte.premier {
     height: 85em;
+  }
+
+  h1 {
+    font-size: 2em;
   }
 
   .carte {
@@ -680,7 +682,7 @@ h4 {
 @media only screen and (max-width: 767px) {
   /*mobile*/
   body {
-    height: 140em;
+    height: 100em;
   }
 
   img {
@@ -688,15 +690,21 @@ h4 {
   }
 
   .quatre_menus {
-    justify-content: center;
-    padding-left: 5%;
+    /*justify-content: center;*/
+    /*padding-left: 5%;
     padding-right: 5%;
-    width: 90%;
+    width: 90%;*/
+    /*padding-bottom: 5%;
+    padding-top: 5%;*/
+    height: 88%;
+    /*	border:2px solid pink;*/
+    /*margin-right:2%;
+    margin-left:1%;*/
   }
   .quatre_menus a {
-    height: 20%;
+    /*height: 22%;
     width: 100%;
-    margin-bottom: 15%;
+    margin-bottom: 15%;*/
   }
   .quatre_menus .resto {
     font-size: 2em;
