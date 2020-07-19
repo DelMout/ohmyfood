@@ -1,93 +1,16 @@
+@import "_polices.scss";
+@import "_animations.scss";
 
-@font-face {
-	font-family: 'blokletters_gras';
-	src: url('../polices/blokletters/gras/Blokletters-Viltstift-webfont.eot');
-	src: url('../polices/blokletters/gras/Blokletters-Viltstift-webfont.eot?#iefix') format('embedded-opentype'), url('../polices/blokletters/gras/Blokletters-Viltstift-webfont.woff2') format('woff2'), url('../polices/blokletters/gras/Blokletters-Viltstift-webfont.woff') format('woff'), url('../polices/blokletters/gras/Blokletters-Viltstift-webfont.ttf') format('truetype'), url('../polices/blokletters/gras/Blokletters-Viltstift-webfont.svg#blokletters_viltstifviltstift') format('svg');
-	font-weight: normal;
-	font-style: normal;
-}
-@font-face {
-	font-family: 'blokletters_normal';
-	src: url('../polices/blokletters/normal/Blokletters-Balpen-webfont.eot');
-	src: url('../polices/blokletters/normal/Blokletters-Balpen-webfont.eot?#iefix') format('embedded-opentype'), url('../polices/blokletters/normal/Blokletters-Balpen-webfont.woff2') format('woff2'), url('../polices/blokletters/normal/Blokletters-Balpen-webfont.woff') format('woff'), url('../polices/blokletters/normal/Blokletters-Balpen-webfont.ttf') format('truetype'), url('../polices/blokletters/normal/Blokletters-Balpen-webfont.svg#blokletters_balpenbalpen') format('svg');
-	font-weight: normal;
-	font-style: normal;
-}
-@font-face {
-	font-family: 'bodonixt';
-	src: url('../polices/bodoni/BodoniXT-webfont.eot');
-	src: url('../polices/bodoni/BodoniXT-webfont.eot?#iefix') format('embedded-opentype'), url('../polices/bodoni/BodoniXT-webfont.woff2') format('woff2'), url('../polices/bodoni/BodoniXT-webfont.woff') format('woff'), url('../polices/bodoni/BodoniXT-webfont.ttf') format('truetype'), url('../polices/bodoni/BodoniXT-webfont.svg#bodonixtregular') format('svg');
-	font-weight: normal;
-	font-style: normal;
-}
-@font-face {
-	font-family: 'courgette';
-	src: url('../polices/courgette/courgette-regular-webfont.eot');
-	src: url('../polices/courgette/courgette-regular-webfont.eot?#iefix') format('embedded-opentype'), url('../polices/courgette/courgette-regular-webfont.woff') format('woff'), url('../polices/courgette/courgette-regular-webfont.ttf') format('truetype'), url('../polices/courgette/courgette-regular-webfont.svg#courgetteregular') format('svg');
-	font-weight: normal;
-	font-style: normal;
-}
-@font-face {
-	font-family: 'croissant';
-	src: url('../polices/croissant/croissantone-regular-webfont.eot');
-	src: url('../polices/croissant/croissantone-regular-webfont.eot?#iefix') format('embedded-opentype'), url('../polices/croissant/croissantone-regular-webfont.woff2') format('woff2'), url('../polices/croissant/croissantone-regular-webfont.woff') format('woff'), url('../polices/croissant/croissantone-regular-webfont.ttf') format('truetype'), url('../polices/croissant/croissantone-regular-webfont.svg#croissant_oneregular') format('svg');
-	font-weight: normal;
-	font-style: normal;
-}
-@font-face {
-	font-family: 'dancing';
-	src: url('../polices/dancing/ancingscript-regular-webfont.eot');
-	src: url('../polices/dancing/dancingscript-regular-webfont.eot?#iefix') format('embedded-opentype'), url('../polices/dancing/dancingscript-regular-webfont.woff2') format('woff2'), url('../polices/dancing/dancingscript-regular-webfont.woff') format('woff'), url('../polices/dancing/dancingscript-regular-webfont.ttf') format('truetype'), url('../polices/dancing/dancingscript-regular-webfont.svg#dancing_script_otregular') format('svg');
-	font-weight: normal;
-	font-style: normal;
-}
-@font-face {
-	font-family: 'inter';
-	src: url('../polices/inter/inter-regular-webfont.eot');
-	src: url('../polices/inter/inter-regular-webfont.eot?#iefix') format('embedded-opentype'), url('../polices/inter/nter-regular-webfont.woff2') format('woff2'), url('../polices/inter/inter-regular-webfont.woff') format('woff'), url('../polices/inter/inter-regular-webfont.ttf') format('truetype'), url('../polices/inter/inter-regular-webfont.svg#interregular') format('svg');
-	font-weight: normal;
-	font-style: normal;
-}
-@font-face {
-	font-family: 'kaushan';
-	src: url('../polices/kaushan/kaushanscript-regular-webfont.eot');
-	src: url('../polices/kaushan/aushanscript-regular-webfont.eot?#iefix') format('embedded-opentype'), url('../polices/kaushan/kaushanscript-regular-webfont.woff2') format('woff2'), url('../polices/kaushan/kaushanscript-regular-webfont.woff') format('woff'), url('../polices/kaushan/kaushanscript-regular-webfont.ttf') format('truetype'), url('../polices/kaushan/kaushanscript-regular-webfont.svg#kaushan_scriptregular') format('svg');
-	font-weight: normal;
-	font-style: normal;
-}
+
+
+
 
 
 $couleur-bandeau:rgb(87,156,135);
 $couleur-logo:rgb(252,202,70);
 
 
-@keyframes zoom-menu{
-	0%{
-		opacity:1;
-		transform:scale(1);
-	}
-	60%{
-		opacity:0.5;
-	}
-	100%{
-		opacity:0.3;
-		transform:scale(2);
-	}
-}
 
-@keyframes mention{
-	0%{transform:rotate(0deg);}
-	3% {transform: rotate(-6deg);}
-	4% {transform: rotate(6deg);}
-	5%,100% {transform: rotate(0deg);}
-}
-
-@keyframes suspension{
-	50% {
-		opacity:0;
-		transform:scale(0.7);
-	}
-}
 
 
 body {

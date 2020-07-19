@@ -1,0 +1,43 @@
+/*Toutes les animations*/
+
+
+@keyframes zoom-menu {  /*sur la 1re page zoom sur nom resto et menu lors du survol de la souris*/
+    0% {
+        opacity: 1;
+        transform: scale(1);
+    }
+
+    60% {
+        opacity: 0.5;
+    }
+
+    100% {
+        opacity: 0.3;
+        transform: scale(2);
+    }
+}
+
+@keyframes mention {    /*sur le footer, a toutes les pages, vibrations de mentions legales ou contatez-nous lors du survol de la souris*/
+    0% {
+        transform: rotate(0deg);
+    }
+
+    3% {
+        transform: rotate(-6deg);
+    }
+
+    4% {
+        transform: rotate(6deg);
+    }
+
+    5%,100% {
+        transform: rotate(0deg);
+    }
+}
+
+@keyframes suspension {    /*apparition et disparition des points de suspensions apres Prochainement*/
+    50% {
+        opacity: 0;
+        transform: scale(0.7);
+    }
+}
