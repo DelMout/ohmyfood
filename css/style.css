@@ -92,6 +92,8 @@
     transform: scale(0.7);
   }
 }
+/*Page accueil avec les liens vers les 4 menus et le footer*/
+/*Mixin qui permet de mettre en forme chaque cadre de restaurant sur la page d'accueil*/
 body {
   font-family: Arial;
   display: flex;
@@ -119,10 +121,12 @@ header {
   width: 100%;
   justify-content: center;
 }
-
-img {
+header a {
   width: 30%;
   margin: auto;
+}
+header img {
+  width: 100%;
   margin-top: 5%;
   margin-bottom: 5%;
 }
@@ -327,10 +331,110 @@ footer .contact:hover {
   animation-delay: 0.8s;
 }
 
-/******LES CARTES*******/
+/******MEDIA QUERIES*******/
+/*TABLETTE*/
+@media only screen and (max-width: 992px) {
+  body {
+    height: 180em;
+  }
+
+  .accueil-menu {
+    height: 100%;
+  }
+
+  img {
+    width: 40%;
+  }
+
+  .quatre_menus {
+    flex-direction: column;
+    justify-content: space-around;
+    padding-bottom: 5%;
+    padding-top: 5%;
+    height: 88%;
+    flex-wrap: nowrap;
+    align-items: center;
+    padding-left: 10%;
+    padding-right: 10%;
+    width: 80%;
+  }
+  .quatre_menus a {
+    height: 22%;
+    width: 100%;
+  }
+  .quatre_menus .resto {
+    font-size: 2em;
+  }
+  .quatre_menus .menu {
+    font-size: 2em;
+  }
+
+  .prochain {
+    font-size: 1.8em;
+  }
+  .prochain span {
+    transform: scale(0.8);
+  }
+
+  footer {
+    font-size: 30px;
+    width: 90%;
+    padding-right: 5%;
+    padding-left: 5%;
+  }
+}
+/******MEDIA QUERIES*******/
+/*MOBILE*/
+@media only screen and (max-width: 767px) {
+  body {
+    height: 100em;
+  }
+
+  header {
+    height: auto;
+  }
+  header a {
+    width: 50%;
+    /* margin: auto;*/
+  }
+  header img {
+    /*width: 100%;
+    margin-top: 5%;
+    margin-bottom: 5%;*/
+  }
+
+  .quatre_menus {
+    height: 88%;
+    padding-left: 5%;
+    padding-right: 5%;
+    width: 90%;
+  }
+  .quatre_menus a {
+    border: 2px dotted pink;
+    /*bordure*/
+  }
+  .quatre_menus .resto {
+    font-size: 2em;
+  }
+  .quatre_menus .menu {
+    font-size: 2em;
+  }
+
+  .prochain {
+    font-size: 1.4em;
+  }
+
+  footer {
+    font-size: 17px;
+    width: 94%;
+    padding-right: 3%;
+    padding-left: 3%;
+  }
+}
+/*Mise en forme de chacun des 4 menus*/
 .body-carte {
   height: 115em;
-  font-family: "Segoe Print";
+  font-family: "Segoe Print", blokletters_normal;
   font-size: 1.8em;
 }
 .body-carte.prem {
@@ -540,58 +644,8 @@ h4 {
 }
 
 /******MEDIA QUERIES*******/
+/*TABLETTE*/
 @media only screen and (max-width: 992px) {
-  /*tablette*/
-  body {
-    height: 180em;
-  }
-
-  .accueil-menu {
-    height: 100%;
-  }
-
-  img {
-    width: 40%;
-  }
-
-  .quatre_menus {
-    flex-direction: column;
-    justify-content: space-around;
-    padding-bottom: 5%;
-    padding-top: 5%;
-    height: 88%;
-    flex-wrap: nowrap;
-    align-items: center;
-    padding-left: 10%;
-    padding-right: 10%;
-    width: 80%;
-  }
-  .quatre_menus a {
-    height: 22%;
-    width: 100%;
-  }
-  .quatre_menus .resto {
-    font-size: 2em;
-  }
-  .quatre_menus .menu {
-    font-size: 2em;
-  }
-
-  .prochain {
-    font-size: 1.8em;
-  }
-  .prochain span {
-    transform: scale(0.8);
-  }
-
-  footer {
-    font-size: 30px;
-    width: 90%;
-    padding-right: 5%;
-    padding-left: 5%;
-  }
-
-  /*Tablette***CARTES*/
   .body-carte {
     height: 85em;
   }
@@ -687,68 +741,20 @@ h4 {
     font-size: 0.8em;
   }
 }
+/******MEDIA QUERIES*******/
+/*MOBILE*/
 @media only screen and (max-width: 767px) {
-  /*mobile*/
-  body {
-    height: 100em;
-  }
-
-  img {
-    width: 50%;
-  }
-
-  header {
-    height: 3.5%;
-  }
-
-  .quatre_menus {
-    /*justify-content: center;*/
-    /*padding-left: 5%;
-    padding-right: 5%;
-    width: 90%;*/
-    /*padding-bottom: 5%;
-    padding-top: 5%;*/
-    height: 88%;
-    /*	border:2px solid pink;*/
-    /*margin-right:2%;
-    margin-left:1%;*/
-    padding-left: 5%;
-    padding-right: 5%;
-    width: 90%;
-  }
-  .quatre_menus a {
-    /*height: 22%;
-    width: 100%;
-    margin-bottom: 15%;*/
-    border: 2px dotted blue;
-  }
-  .quatre_menus .resto {
-    font-size: 2em;
-  }
-  .quatre_menus .menu {
-    font-size: 2em;
-  }
-
-  .prochain {
-    font-size: 1.4em;
-  }
-
-  footer {
-    font-size: 17px;
-    width: 94%;
-    padding-right: 3%;
-    padding-left: 3%;
-  }
-
-  /*Mobile***CARTES*/
   .body-carte {
     height: 100em;
   }
-  .body-carte.premier {
+  .body-carte.prem {
     height: 100em;
   }
-  .body-carte.deuxieme {
-    height: 90em;
+  .body-carte.deux {
+    height: 80em;
+  }
+  .body-carte.quatre {
+    height: 110em;
   }
 
   h1 {

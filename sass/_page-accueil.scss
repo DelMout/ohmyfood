@@ -1,0 +1,352 @@
+/*Page accueil avec les liens vers les 4 menus et le footer*/
+@import "_mixin.scss";
+
+body {
+    font-family: Arial;
+    display: flex;
+    flex-direction: column;
+    font-size: 1.2em;
+    height: 140em;
+    margin: 0;
+}
+
+
+
+a {
+    text-decoration: none;
+
+    &:visited {
+        color: $couleur-logo;
+    }
+
+    &:link {
+        color: $couleur-logo;
+    }
+
+    &:active {
+        color: $couleur-logo;
+    }
+}
+
+
+
+header {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+
+    a{
+        width:30%;
+        margin:auto;
+    }
+
+    & img {
+        width: 100%;
+        margin-top: 5%;
+        margin-bottom: 5%;
+    }
+}
+
+
+
+.prochain, footer, header {
+    background-color: $couleur-bandeau;
+    color: $couleur-logo;
+    font-family: inter;
+}
+
+.quatre_menus {
+    width: 76%;
+    height: 72%;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding-left: 12%;
+    padding-right: 12%;
+    padding-top: 6%;
+    padding-bottom: 0%;
+
+
+    & a {
+        box-shadow: 0 0 1em rgba(0,0,0,0.2);
+        width: 47%;
+        height: 45%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+}
+
+.accueil-menu {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    overflow: hidden;
+
+
+    &:hover > p {
+        animation: zoom-menu 3s infinite ease-in-out alternate;
+    }
+}
+
+i {
+    font-size: 4em;
+    background: linear-gradient(to right, rgb(241,88,97) 0%,rgb(247,143,106) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.resto {
+    transform-origin: left;
+    animation: degrade 10s;
+}
+
+
+
+
+.premier {
+    $couleur-fond: rgb(252,223,219);
+    @include mep-quatre-menus($couleur-fond);
+
+
+    & .menu {
+        text-transform: uppercase;
+        font-weight: bold;
+        display: inline-block;
+        margin-top: 10%;
+        font-size: 5em;
+    }
+
+    & .resto, & h2, & h4 {
+        font-family: 'courgette';
+        font-weight: bold;
+        font-size: 2.5em;
+    }
+}
+
+.deuxieme {
+    $couleur-fond: rgb(255,245,254);
+    $couleur-debut-degrade: rgb(199,116,18);
+    $couleur-fin-degrade: rgb(144,91,253);
+    $couleur-menu: rgb(199,116,18);
+
+
+    @include mep-quatre-menus($couleur-fond,$couleur-debut-degrade,$couleur-fin-degrade,$couleur-menu);
+
+    & .menu {
+        font-weight: bold;
+        font-size: 5em;
+        display: inline-block;
+        transform: scaleX(1.4);
+        letter-spacing: 0.05em;
+        font-family: bodonixt;
+    }
+
+    & .resto {
+        font-family: 'croissant';
+        font-size: 2.5em;
+    }
+}
+
+.troisieme {
+    $couleur-fond: rgb(249,249,249);
+    $couleur-debut-degrade: rgb(4,49,223);
+    $couleur-fin-degrade: rgb(8,135,251);
+    $couleur-menu: rgb(8,135,251);
+
+    @include mep-quatre-menus($couleur-fond,$couleur-debut-degrade,$couleur-fin-degrade,$couleur-menu);
+
+    & .resto {
+        font-family: 'dancing';
+        font-size: 4em;
+    }
+}
+
+.quatrieme {
+    $couleur-fond: white;
+    $couleur-debut-degrade: rgb(66,151,60);
+    $couleur-fin-degrade: rgb(191,255,126);
+    $couleur-menu: rgb(114,191,86);
+
+    @include mep-quatre-menus($couleur-fond,$couleur-debut-degrade,$couleur-fin-degrade,$couleur-menu);
+
+    & .resto {
+        font-family: 'kaushan';
+        font-size: 4em;
+    }
+}
+
+
+footer {
+    display: flex;
+    width: 98%;
+    position: fixed;
+    bottom: 0px;
+    font-size: 40px;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1%;
+
+    & .mentions:hover {
+        animation: mention 3s infinite;
+    }
+
+    & .contact:hover {
+        animation: mention 3s infinite;
+    }
+}
+
+
+.prochain {
+    display: flex;
+    margin: auto;
+    margin-top: 0;
+    padding-left: 2%;
+    padding-right: 2%;
+    font-size: 2.5em;
+    border-radius: 12px;
+    line-height: 0em;
+    flex-direction: row;
+
+    & .points {
+        margin-left: 4%;
+        margin-top: 10%;
+        height: 0.4em;
+        width: 2.2em;
+    }
+
+    & span {
+        display: inline-block;
+        width: 0.4em;
+        height: 0.4em;
+        border-radius: 50%;
+        background-color: $couleur-logo;
+        animation: suspension 2s infinite ease-in-out;
+
+        &:nth-child(2) {
+            animation-delay: 0.4s;
+        }
+
+        &:nth-child(3) {
+            animation-delay: 0.8s;
+        }
+    }
+}
+
+
+/******MEDIA QUERIES*******/    /*TABLETTE*/
+@media only screen and (max-width: 992px) {
+    body {
+        height: 180em;
+    }
+
+    .accueil-menu {
+        height: 100%;
+    }
+
+    img {
+        width: 40%;
+    }
+
+    .quatre_menus {
+        flex-direction: column;
+        justify-content: space-around;
+        padding-bottom: 5%;
+        padding-top: 5%;
+        height: 88%;
+        flex-wrap: nowrap;
+        align-items: center;
+        padding-left: 10%;
+        padding-right: 10%;
+        width: 80%;
+
+        & a {
+            height: 22%;
+            width: 100%;
+        }
+
+        & .resto {
+            font-size: 2em;
+        }
+
+        & .menu {
+            font-size: 2em;
+        }
+    }
+
+    .prochain {
+        font-size: 1.8em;
+
+
+        & span {
+            transform: scale(0.8);
+        }
+    }
+
+    footer {
+        font-size: 30px;
+        width: 90%;
+        padding-right: 5%;
+        padding-left: 5%;
+    }
+    }
+
+    /******MEDIA QUERIES*******/ /*MOBILE*/
+
+
+    @media only screen and (max-width: 767px) {
+
+        body {
+            height: 100em;
+        }
+
+        header {
+            height: auto;
+
+            a {
+                width: 50%;
+               /* margin: auto;*/
+            }
+
+            & img {
+                /*width: 100%;
+                margin-top: 5%;
+                margin-bottom: 5%;*/
+            }
+        }
+
+        .quatre_menus {
+            
+            height: 88%;
+            padding-left: 5%;
+            padding-right: 5%;
+            width: 90%;
+
+
+            & a {
+               border: 2px dotted pink; /*bordure*/
+            }
+
+            & .resto {
+                font-size: 2em;
+            }
+
+            & .menu {
+                font-size: 2em;
+            }
+        }
+
+        .prochain {
+            font-size: 1.4em;
+        }
+
+        footer {
+            font-size: 17px;
+            width: 94%;
+            padding-right: 3%;
+            padding-left: 3%;
+        }
+    }
