@@ -1,6 +1,10 @@
 /*Mixin qui permet de mettre en forme chaque cadre de restaurant sur la page d'accueil*/
+
 $couleur-bandeau: rgb(87,156,135);
 $couleur-logo: rgb(252,202,70);
+
+/*menu:Le mot menu dans chaque encadre*/
+/*resto:le nom du restaurant dans chaque encadre*/
 
 @mixin mep-quatre-menus($couleur-fond: white,$couleur-debut-degrade: black,$couleur-fin-degrade: black,$couleur-menu: black,$police-resto: Arial, $police-menu: 'Segoe Print') {
     background-color: $couleur-fond;
@@ -11,7 +15,7 @@ $couleur-logo: rgb(252,202,70);
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
         font-family: $police-resto;
-        font-size: 3em;
+        font-size: 2.5em;
     }
 
     & .menu {
