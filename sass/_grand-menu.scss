@@ -24,8 +24,9 @@
     margin: 0;
     font-size: 1.6em;
 
-    & + h2 {
+    & h2 {
         margin-top: 2%;
+        
     }
 }
 
@@ -37,10 +38,10 @@ h1 {
 }
 
 h2 {
-    font-size: 3.2em;
+    font-size: 2.5em;
     font-weight: normal;
     text-align: center;
-}
+   }
 
 h3 {
     font-size: 1.6em;
@@ -279,7 +280,7 @@ h4 {
     }
 
     .premiere_note {
-        & + h2 {
+        & h2 {
             font-size: 1.5em;
         }
 
@@ -397,117 +398,124 @@ h4 {
         }
     }
 
-
-    h1 {
-        font-size: 1.3em;
-    }
-
-    .deuxieme {
-        letter-spacing: 0em;
-
-        &.resto {
+    .premiere_note {
+        & h2 {
             font-size: 1.2em;
         }
+}
 
-        & .titre .titre_h3 {
-            font-size: .65em;
-            font-weight: bold;
+
+        h1 {
+            font-size: 1.3em;
         }
 
-        & .prix {
-            font-weight: bold;
+        .deuxieme {
+            letter-spacing: 0em;
+
+            &.resto {
+                font-size: 1.2em;
+            }
+
+            & .titre .titre_h3 {
+                font-size: .65em;
+                font-weight: bold;
+            }
+
+            & .prix {
+                font-weight: bold;
+            }
+
+            & .titre {
+                height: 7%;
+                margin-top: 25%;
+            }
         }
 
-        & .titre {
-            height: 7%;
-            margin-top: 25%;
-        }
-    }
+        .troisieme {
+            &.resto {
+                font-size: 1.2em;
+            }
 
-    .troisieme {
-        &.resto {
-            font-size: 1.2em;
-        }
+            & .titre .titre_h3 {
+                font-size: .65em;
+                font-weight: bold;
+            }
 
-        & .titre .titre_h3 {
-            font-size: .65em;
-            font-weight: bold;
-        }
+            & .prix {
+                font-weight: bold;
+            }
 
-        & .prix {
-            font-weight: bold;
-        }
+            & .titre {
+                height: 7%;
+                margin-top: 25%;
+            }
 
-        & .titre {
-            height: 7%;
-            margin-top: 25%;
-        }
-
-        & .trait_delice.t_droit { /*trait droit transforme en symetrie verticale et horizontale*/
-            transform: scaleX(-1) scaleY(-1);
-        }
-    }
-
-    .quatrieme {
-        &.resto {
-            font-size: 1.2em;
+            & .trait_delice.t_droit { /*trait droit transforme en symetrie verticale et horizontale*/
+                transform: scaleX(-1) scaleY(-1);
+            }
         }
 
-        & .titre .titre_h3 {
-            font-size: .8em;
-            font-weight: bold;
+        .quatrieme {
+            &.resto {
+                font-size: 1.2em;
+            }
+
+            & .titre .titre_h3 {
+                font-size: .8em;
+                font-weight: bold;
+            }
+
+            & .prix {
+                font-weight: bold;
+            }
+
+            & .titre {
+                height: 7%;
+                margin-top: 25%;
+            }
         }
 
-        & .prix {
-            font-weight: bold;
+        .choix {
+            flex-direction: column;
+            margin-top: 8%;
         }
 
-        & .titre {
-            height: 7%;
-            margin-top: 25%;
+        .nom {
+            font-size: 0.7em;
         }
-    }
 
-    .choix {
-        flex-direction: column;
-        margin-top: 8%;
-    }
+        .prix {
+            font-size: 0.8em;
+        }
 
-    .nom {
-        font-size: 0.7em;
-    }
+        .titre { /*titre mis en sandwich entre les 2 traits*/
+            flex-direction: column;
+            margin-top: 10%;
 
-    .prix {
-        font-size: 0.8em;
-    }
+            & .trait {
+                display: flex;
+                height: 20%;
+                width: 100%;
+                align-items: center;
+            }
 
-    .titre { /*titre mis en sandwich entre les 2 traits*/
-        flex-direction: column;
-        margin-top: 10%;
-        & .trait {
-            display: flex;
-            height: 20%;
-            width: 100%;
+            & .titre_h3 {
+                font-size: 1em;
+                width: auto;
+            }
+        }
+
+        .fin {
+            flex-direction: column;
+            margin-top: 0%;
             align-items: center;
-        }
 
-        & .titre_h3 {
-            font-size: 1em;
-            width: auto;
-        }
-    }
+            & i {
+                margin-right: 2%;
+            }
 
-    .fin {
-        flex-direction: column;
-        margin-top: 0%;
-        align-items: center;
-
-        & i {
-            margin-right: 2%;
+            & h4 {
+                text-align: center;
+            }
         }
-
-        & h4 {
-            text-align: center;
-        }
-    }
     }
