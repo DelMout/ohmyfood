@@ -1,0 +1,48 @@
+/*Page detaillant les mentions legales*/
+
+.body-legales{
+    height:180em;
+}
+
+.legales {
+    background-color: rgb(230,230,230);
+    font-family: inter;
+    width:70%;
+    margin-top:5%;
+    margin-left:auto;
+    margin-right:auto;
+    padding:(2% 3% 2% 3%);
+    & h6{
+        font-size:1.8em;
+        margin-bottom:0;
+    }
+    & span{
+        font-weight:bold;
+    }
+}
+
+/******MEDIA QUERIES*******/    /*TABLETTE*/
+@media only screen and (max-width: 992px) {
+    .body-legales {
+        height: 200em;
+    }
+
+    .legales {
+       
+       & h6 {
+            font-size: 1.4em;
+       }
+    }
+}
+
+ /******MEDIA QUERIES*******/ /*MOBILE*/
+@media only screen and (max-width: 767px) {
+    .body-legales {
+        height: 200em;
+    }
+
+    .legales {
+        width: 85%;
+        font-size: 0.8em;
+    }
+}
