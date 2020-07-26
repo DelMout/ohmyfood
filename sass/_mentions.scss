@@ -1,7 +1,7 @@
 /*Page detaillant les mentions legales*/
 
 .body-legales{
-    height:180em;
+    height:190em;
 }
 
 .legales {
@@ -12,6 +12,10 @@
     margin-left:auto;
     margin-right:auto;
     padding:(2% 3% 2% 3%);
+    & h5{
+    font-size:2em;
+    text-align:center;
+     }
     & h6{
         font-size:1.8em;
         margin-bottom:0;
@@ -44,5 +48,8 @@
     .legales {
         width: 85%;
         font-size: 0.8em;
+        & h5{
+            font-size:1.6em;
+        }
     }
 }
