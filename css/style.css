@@ -222,14 +222,14 @@ i {
   background: linear-gradient(45deg, #c77412 0%, #905bfd 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  font-family: Arial;
+  font-family: "croissant";
   font-size: 2.5em;
 }
 .deuxieme .menu {
   font-size: 4em;
   line-height: 2em;
   color: #c77412;
-  font-family: "Segoe Print", "blokletters_normal";
+  font-family: bodonixt, "blokletters_normal";
 }
 .deuxieme .menu {
   font-weight: bold;
@@ -237,10 +237,6 @@ i {
   display: inline-block;
   transform: scaleX(1.4);
   letter-spacing: 0.05em;
-  font-family: bodonixt;
-}
-.deuxieme .resto {
-  font-family: "croissant";
 }
 
 .troisieme {
@@ -250,7 +246,7 @@ i {
   background: linear-gradient(45deg, #0431df 0%, #0887fb 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  font-family: Arial;
+  font-family: "dancing";
   font-size: 2.5em;
 }
 .troisieme .menu {
@@ -260,7 +256,6 @@ i {
   font-family: "Segoe Print", "blokletters_normal";
 }
 .troisieme .resto {
-  font-family: "dancing";
   font-size: 4em;
 }
 
@@ -271,7 +266,7 @@ i {
   background: linear-gradient(45deg, #42973c 0%, #bfff7e 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  font-family: Arial;
+  font-family: "kaushan";
   font-size: 2.5em;
 }
 .quatrieme .menu {
@@ -281,7 +276,6 @@ i {
   font-family: "Segoe Print", "blokletters_normal";
 }
 .quatrieme .resto {
-  font-family: "kaushan";
   font-size: 4em;
 }
 

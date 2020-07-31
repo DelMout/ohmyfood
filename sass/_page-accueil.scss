@@ -131,9 +131,10 @@ i {         /*degrade sur la note de musique*/
     $couleur-debut-degrade: rgb(199,116,18);
     $couleur-fin-degrade: rgb(144,91,253);
     $couleur-menu: rgb(199,116,18);
+    $police-resto: 'croissant';
+    $police-menu:bodonixt;
 
-
-    @include mep-quatre-menus($couleur-fond,$couleur-debut-degrade,$couleur-fin-degrade,$couleur-menu);
+    @include mep-quatre-menus($couleur-fond,$couleur-debut-degrade,$couleur-fin-degrade,$couleur-menu,$police-resto,$police-menu);
 
     & .menu {
         font-weight: bold;
@@ -141,12 +142,7 @@ i {         /*degrade sur la note de musique*/
         display: inline-block;
         transform: scaleX(1.4);
         letter-spacing: 0.05em;
-        font-family: bodonixt;
-    }
-
-    & .resto {
-        font-family: 'croissant';
-    }
+     }
 }
 
 .troisieme {
@@ -154,11 +150,11 @@ i {         /*degrade sur la note de musique*/
     $couleur-debut-degrade: rgb(4,49,223);
     $couleur-fin-degrade: rgb(8,135,251);
     $couleur-menu: rgb(8,135,251);
+    $police-resto: 'dancing';
 
-    @include mep-quatre-menus($couleur-fond,$couleur-debut-degrade,$couleur-fin-degrade,$couleur-menu);
+    @include mep-quatre-menus($couleur-fond,$couleur-debut-degrade,$couleur-fin-degrade,$couleur-menu,$police-resto);
 
     & .resto {
-        font-family: 'dancing';
         font-size: 4em;
     }
 }
@@ -168,11 +164,11 @@ i {         /*degrade sur la note de musique*/
     $couleur-debut-degrade: rgb(66,151,60);
     $couleur-fin-degrade: rgb(191,255,126);
     $couleur-menu: rgb(114,191,86);
+    $police-resto: 'kaushan';
 
-    @include mep-quatre-menus($couleur-fond,$couleur-debut-degrade,$couleur-fin-degrade,$couleur-menu);
+    @include mep-quatre-menus($couleur-fond,$couleur-debut-degrade,$couleur-fin-degrade,$couleur-menu,$police-resto);
 
     & .resto {
-        font-family: 'kaushan';
         font-size: 4em;
     }
 }
