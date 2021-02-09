@@ -1,5 +1,5 @@
 
-# Ohmyfood ! Sélection cartes menus restaurant
+# Dynamiser une page web avec animations CSS
 ### Projet 3 de la formation Développeur web OpenClassrooms
 ### Transformer une maquette en site web avec animations CSS
 
