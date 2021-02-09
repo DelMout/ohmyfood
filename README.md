@@ -8,7 +8,7 @@
 ## Technologies
 * HTML
 * CSS
-* Sans framewok
+* Sans framework
 
 ***
 
